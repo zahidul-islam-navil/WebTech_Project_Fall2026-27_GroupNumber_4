@@ -1,4 +1,3 @@
-/* General Design */
 * {
     box-sizing: border-box;
 }
@@ -68,7 +67,7 @@ main {
 }
 
 .registration-main {
-    max-width: 600px;
+    max-width: 950px;
 }
 
 h2 {
@@ -173,4 +172,64 @@ footer {
     width: auto;
     padding: 0;
     margin: 0;
+}
+
+/* Registration Field Groups */
+.registration-main fieldset {
+    border: 1px solid #347580;
+    border-radius: 5px;
+    padding: 18px 22px 6px;
+    margin-bottom: 20px;
+}
+
+.registration-main legend {
+    color: #347580;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.registration-main .field {
+    display: grid;
+    grid-template-columns: 195px 1fr;
+    column-gap: 20px;
+    align-items: start;
+}
+
+.registration-main .field > label {
+    margin-bottom: 0;
+    padding-top: 9px;
+}
+
+.registration-main .field > input,
+.registration-main .field > select,
+.registration-main .field > textarea {
+    max-width: 500px;
+}
+
+.registration-main .field > .error-message {
+    grid-column: 2;
+}
+
+.registration-main .checkbox-field,
+.registration-main form > .error-message {
+    margin-left: 0;
+}
+
+.registration-main .checkbox-field label {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Registration Error Box */
+.registration-main .form-error {
+    background-color: #fff0f0;
+    color: #b42323;
+    border: 1px solid #db7777;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 12px 0;
+}
+
+.registration-main .form-error:empty {
+    display: none;
 }
