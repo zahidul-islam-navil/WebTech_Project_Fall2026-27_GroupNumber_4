@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_portal.css">
+    <script src="../../JS/employee/emp_portal.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" alt="EMSync Logo" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="../../index.html">Home</a>
+            <a href="emp_login.html">Login</a>
+            <a href="emp_registration.html" class="active">Registration</a>
+        </div>
+    </nav>
+
+    <main class="registration-main">
+        <h2>Employee Registration</h2>
+
+        <form onsubmit="return validateRegistration()" onreset="clearRegistrationErrors()" novalidate>
+
+            <div class="field">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" placeholder="Enter full name">
+                <p id="regNameError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regId">Employee ID</label>
+                <input type="text" id="regId" placeholder="Enter ID">
+                <p id="regIdError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" placeholder="Enter email">
+                <p id="regEmailError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPhone">Phone Number</label>
+                <input type="tel" id="regPhone" placeholder="01XXXXXXXXX">
+                <p id="regPhoneError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regEmergency">Emergency Contact</label>
+                <input type="tel" id="regEmergency" placeholder="01XXXXXXXXX">
+                <p id="regEmergencyError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regDepartment">Department</label>
+                <select id="regDepartment">
+                    <option value="">Select department</option>
+                    <option>Software Engineering</option>
+                    <option>Human Resources</option>
+                    <option>Finance</option>
+                    <option>Marketing</option>
+                    <option>Administration</option>
+                </select>
+                <p id="regDepartmentError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPosition">Position</label>
+                <select id="regPosition">
+                    <option value="">Select position</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Software Engineer</option>
+                    <option>HR Officer</option>
+                    <option>Accountant</option>
+                    <option>Marketing Executive</option>
+                    <option>Office Assistant</option>
+                </select>
+                <p id="regPositionError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" id="regMale" name="regGender" value="Male"> Male
+                    </label>
+                    <label>
+                        <input type="radio" id="regFemale" name="regGender" value="Female"> Female
+                    </label>
+                </div>
+                <p id="regGenderError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regDob">Date of Birth</label>
+                <input type="date" id="regDob">
+                <p id="regDobError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regBlood">Blood Group</label>
+                <select id="regBlood">
+                    <option value="">Select blood group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+                <p id="regBloodError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regAddress">Address</label>
+                <textarea id="regAddress" rows="3" placeholder="Enter address"></textarea>
+                <p id="regAddressError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regImage">Profile Image</label>
+                <input type="file" id="regImage" accept="image/*">
+                <p id="regImageError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" placeholder="At least 8 characters">
+                <p id="regPasswordError" class="error-message"></p>
+            </div>
+
+            <div class="field">
+                <label for="regConfirm">Confirm Password</label>
+                <input type="password" id="regConfirm" placeholder="Confirm password">
+                <p id="regConfirmError" class="error-message"></p>
+            </div>
+
+            <div class="checkbox-field">
+                <input type="checkbox" id="regTerms">
+                <label for="regTerms">I agree to all Terms and Services</label>
+            </div>
+            <p id="regTermsError" class="error-message"></p>
+
+            <div class="form-buttons">
+                <button type="submit">Registration</button>
+                <button type="reset" class="reset-button">Reset</button>
+            </div>
+
+        </form>
+
+        <p class="bottom-link">Already have an account? <a href="emp_login.html">Login</a></p>
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>
