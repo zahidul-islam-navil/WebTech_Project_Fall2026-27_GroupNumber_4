@@ -147,6 +147,17 @@ function validAddress() {
     return true;
 }
 
+function validImage() {
+    let image = document.getElementById("regImage").value;
+    document.getElementById("regImageError").textContent = "";
+
+    if (image === "") {
+        document.getElementById("regImageError").textContent = "Select a profile image.";
+        return false;
+    }
+    return true;
+}
+
 function validPassword() {
     let password = document.getElementById("regPassword").value;
     document.getElementById("regPasswordError").textContent = "";
