@@ -57,7 +57,12 @@ function validEmployeeId() {
 function validEmail() {
     let email = document.getElementById("regEmail").value.trim();
     document.getElementById("regEmailError").textContent = "";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+        document.getElementById("regEmailError").textContent = "Enter an email.";
+        return false;
+    }
+    if (!regex.test(email)) {
         document.getElementById("regEmailError").textContent = "Enter a valid email.";
         return false;
     }
@@ -67,7 +72,8 @@ function validEmail() {
 function validPhone() {
     let phone = document.getElementById("regPhone").value.trim();
     document.getElementById("regPhoneError").textContent = "";
-    if (!/^[0-9]{11}$/.test(phone)) {
+    regex = /^[0-9]{11}$/;
+    if (!regex.test(phone)) {
         document.getElementById("regPhoneError").textContent = "Use exactly 11 digits.";
         return false;
     }
@@ -77,7 +83,8 @@ function validPhone() {
 function validEmergency() {
     let number = document.getElementById("regEmergency").value.trim();
     document.getElementById("regEmergencyError").textContent = "";
-    if (!/^[0-9]{11}$/.test(number)) {
+    regex = /^[0-9]{11}$/;
+    if (!regex.test(number)) {
         document.getElementById("regEmergencyError").textContent = "Use exactly 11 digits.";
         return false;
     }

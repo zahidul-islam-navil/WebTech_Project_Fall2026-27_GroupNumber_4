@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #f2f5f6;
     color: #222;
 }
@@ -45,8 +45,7 @@ body {
     font-weight: bold;
 }
 
-.page-nav a:hover,
-.page-nav a.active {
+.page-nav a:hover, .page-nav a.active {
     background-color: #347580;
     color: white;
 }
@@ -87,9 +86,7 @@ h2 {
     font-weight: bold;
 }
 
-.field input,
-.field select,
-.field textarea {
+.field input, .field select, .field textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #aaa;
@@ -200,9 +197,7 @@ footer {
     padding-top: 9px;
 }
 
-.registration-main .field > input,
-.registration-main .field > select,
-.registration-main .field > textarea {
+.registration-main .field > input, .registration-main .field > select, .registration-main .field > textarea {
     max-width: 500px;
 }
 
@@ -210,8 +205,7 @@ footer {
     grid-column: 2;
 }
 
-.registration-main .checkbox-field,
-.registration-main form > .error-message {
+.registration-main .checkbox-field, .registration-main form > .error-message {
     margin-left: 0;
 }
 

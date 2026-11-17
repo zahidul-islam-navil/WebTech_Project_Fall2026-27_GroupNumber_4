@@ -123,7 +123,8 @@ function clearLeaveErrors() {
 function validProfileEmail() {
     let value = document.getElementById("email").value.trim();
     document.getElementById("emailError").textContent = "";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(value)) {
         document.getElementById("emailError").textContent = "Enter a valid email.";
         return false;
     }
@@ -133,7 +134,12 @@ function validProfileEmail() {
 function validProfilePhone() {
     let value = document.getElementById("phone").value.trim();
     document.getElementById("phoneError").textContent = "";
-    if (!/^[0-9]{11}$/.test(value)) {
+    let regex = /^[0-9]{11}$/;
+    if (value === "") {
+        document.getElementById("phoneError").textContent = "Enter a phone number.";
+        return false;
+    }
+    if (!regex.test(value)) {
         document.getElementById("phoneError").textContent = "Use exactly 11 digits.";
         return false;
     }
@@ -143,7 +149,12 @@ function validProfilePhone() {
 function validProfileEmergency() {
     let value = document.getElementById("emergency").value.trim();
     document.getElementById("emergencyError").textContent = "";
-    if (!/^[0-9]{11}$/.test(value)) {
+    let regex = /^[0-9]{11}$/;
+    if (value === "") {
+        document.getElementById("emergencyError").textContent = "Enter a phone number.";
+        return false;
+    }
+    if (!regex.test(value)) {
         document.getElementById("emergencyError").textContent = "Use exactly 11 digits.";
         return false;
     }
@@ -217,7 +228,7 @@ function validatePassword() {
 
     if (current && password && confirm) {
         document.getElementById("passwordForm").reset();
-        document.getElementById("passwordMessage").textContent = "Password fields validated!";
+        document.getElementById("passwordMessage").textContent = "Password updated successfully!";
     }
     return false;
 }
