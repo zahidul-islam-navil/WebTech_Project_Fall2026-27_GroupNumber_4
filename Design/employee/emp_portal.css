@@ -1,4 +1,3 @@
-/* General Design */
 * {
     box-sizing: border-box;
 }
@@ -189,7 +188,6 @@ footer {
     padding: 0 8px;
 }
 
-/* Registration: Label on left, field on right */
 .registration-main .field {
     display: grid;
     grid-template-columns: 195px 1fr;

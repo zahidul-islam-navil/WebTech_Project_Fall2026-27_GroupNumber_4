@@ -33,7 +33,7 @@ function clearLoginErrors() {
     document.getElementById("loginPasswordError").textContent = "";
 }
 
-/* Employee Registration Validation */
+/* Employee Registration */
 function validName() {
     let name = document.getElementById("regName").value.trim();
     document.getElementById("regNameError").textContent = "";

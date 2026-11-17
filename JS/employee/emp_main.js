@@ -105,11 +105,6 @@ function validateLeave() {
     document.getElementById("leaveMessage").textContent = "";
 
     if (type && start && end && reason) {
-        let row = document.getElementById("leaveHistory").insertRow(0);
-        row.insertCell(0).textContent = document.getElementById("leaveType").value;
-        row.insertCell(1).textContent = document.getElementById("startDate").value;
-        row.insertCell(2).textContent = document.getElementById("endDate").value;
-        row.insertCell(3).textContent = "Pending";
         document.getElementById("leaveForm").reset();
         document.getElementById("leaveMessage").textContent = "Leave request submitted!";
     }
@@ -182,7 +177,7 @@ function validateProfile() {
     return false;
 }
 
-/* Change Password: Validation Only */
+/* Change Password */
 function validCurrentPassword() {
     let value = document.getElementById("currentPassword").value;
     document.getElementById("currentPasswordError").textContent = "";
