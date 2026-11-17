@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html" class="active">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html">Leave</a>
+            <a href="emp_tasks.html">Tasks</a>
+            <a href="emp_payslips.html">Payslips</a>
+            <a href="emp_notices.html">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="overview">
+            <div class="info-rows">
+
+                <div class="overview-box">
+                    <h3>Today's Attendance</h3>
+                    <h2 id="dashboardAttendance">Not Checked In</h2>
+                    <a href="emp_attendance.html">View Attendance</a>
+                </div>
+
+                <div class="overview-box">
+                    <h3>Available Leave</h3>
+                    <h2>12 Days</h2>
+                    <a href="emp_leave.html">View Leave</a>
+                </div>
+
+                <div class="overview-box">
+                    <h3>Assigned Tasks</h3>
+                    <h2>3 Tasks</h2>
+                    <a href="emp_tasks.html">View Tasks</a>
+                </div>
+
+                <div class="overview-box">
+                    <h3>Latest Payslip</h3>
+                    <h2>October 2026</h2>
+                    <button type="button">Download</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div>
+                <h1>Welcome, Kazi Shafiqul Alam</h1>
+                <p><strong>Employee ID:</strong> EMP-1042</p>
+                <p><strong>Department:</strong> Software Engineering</p>
+                <p><strong>Position:</strong> Frontend Developer</p>
+
+                <div class="attendance-buttons">
+                    <button type="button" id="checkInButton" class="checkin-button">Check In</button>
+                    <button type="button" id="checkOutButton" class="checkout-button">Check Out</button>
+                </div>
+            </div>
+
+            <div class="employee-image">
+                <img src="../../Images/emp.jpg" alt="Employee Image" height="140" width="130">
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">
+                <h2>My Tasks</h2>
+                <a href="emp_tasks.html">View All</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Check website forms</td>
+                        <td>20 Nov 2026</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Update employee information page</td>
+                        <td>24 Nov 2026</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <div class="section-title">
+                <h2>Latest Notice</h2>
+                <a href="emp_notices.html">View All</a>
+            </div>
+
+            <p><strong>Attendance Reminder</strong></p>
+            <p>All employees are requested to check their attendance records by the end of November.</p>
+            <p class="subtext">HR Department - 15 Nov 2026</p>
+        </div>
+
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+</body>
+</html>

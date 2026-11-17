@@ -39,7 +39,7 @@ body {
 .portal-box {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     background-color: white;
     border: 1px solid #c5d3d8;
     border-radius: 22px;

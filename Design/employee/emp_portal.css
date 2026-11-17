@@ -1,0 +1,176 @@
+/* General Design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f6;
+    color: #222;
+}
+
+/* Header */
+.page-header {
+    background-color: #087F8C;
+    padding: 12px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h3 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Navigation */
+.page-nav {
+    background-color: #dce8ec;
+}
+
+.nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.page-nav a {
+    padding: 15px 17px;
+    color: #233d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-nav a:hover,
+.page-nav a.active {
+    background-color: #347580;
+    color: white;
+}
+
+/* Login and Registration Boxes */
+main {
+    background-color: white;
+    border: 1px solid #d4dce0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #d5dadd;
+    margin: 35px auto;
+    padding: 28px;
+    width: 92%;
+}
+
+.login-main {
+    max-width: 430px;
+}
+
+.registration-main {
+    max-width: 600px;
+}
+
+h2 {
+    color: #213a47;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Form Fields */
+.field {
+    margin-bottom: 14px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.error-message:empty {
+    display: none;
+}
+
+/* Buttons and Links */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #347580;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.reset-button {
+    background-color: #6a7880;
+}
+
+.bottom-link {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.bottom-link a {
+    color: #347580;
+}
+
+footer {
+    text-align: center;
+    color: #53646a;
+    padding: 20px;
+}
+
+/* Gender Radio Buttons */
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.gender-options input {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
