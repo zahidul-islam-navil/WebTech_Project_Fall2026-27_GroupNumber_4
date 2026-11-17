@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>Attendance & Leaves - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+            
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html" >Dashboard</a>
+                <a href="attendance.html" class="active">Attendance & Leaves</a>
+                <a href="tasks.html">Task Board</a>
+                <a href="performance.html">Performance</a>
+                <a href="hr-requests.html">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <br>
+
+            <!-- Team Attendance & Member Directory -->
+            <fieldset id="team-attendance">
+                <legend>Team Attendance</legend>
+                
+                <table border="1" id="attandence">
+
+                        <tr>
+                            <th>Emp ID</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Daily Status</th>
+                        </tr>
+
+                        <tr>
+                            <td>EMP-1021</td>
+                            <td>Tariq Rahman</td>
+                            <td>Senior SE</td>
+                            <td>Present</td>
+                        </tr>
+
+                        <tr>
+                            <td>EMP-1025</td>
+                            <td>Sadia Islam</td>
+                            <td>SQA Engineer</td>
+                            <td>On Leave</td>
+                        </tr>
+
+                        <tr>
+                            <td>EMP-1033</td>
+                            <td>Tanvir Hasan</td>
+                            <td>DevOps Engineer</td>
+                            <td>Present</td>
+                        </tr>
+
+                        <tr>
+                            <td>EMP-1042</td>
+                            <td>Nusrat Jahan</td>
+                            <td>Frontend Developer</td>
+                            <td>Absent</td>
+                        </tr>
+
+                </table>
+            </fieldset>
+
+            <!-- Leave Requests Approval -->
+            <fieldset id="team-leave">
+                <legend>Team Leave Requests</legend>
+                <table id="leave">
+
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>Duration</th>
+                            <th>Reason</th>
+                            <th>Decision</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>Sadia Islam</td>
+                            <td>Medical Leave</td>
+                            <td>Nov 03 - Nov 05, 2026</td>
+                            <td>Medical appointment and recovery</td>
+                            <td>
+                                <input type="button" value="Approve" onclick="updateLeave(this, 'Approved')" style="padding: 6px 12px;">
+                                <input type="button" value="Reject" onclick="updateLeave(this, 'Rejected')" style="padding: 6px 12px; background-color: #a11b1b;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nusrat Jahan</td>
+                            <td>Casual Leave</td>
+                            <td>Nov 06, 2026</td>
+                            <td>Personal emergency</td>
+                            <td>
+                                <input type="button" value="Approve" onclick="updateLeave(this, 'Approved')" style="padding: 6px 12px;">
+                                <input type="button" value="Reject" onclick="updateLeave(this, 'Rejected')" style="padding: 6px 12px; background-color: #a11b1b;">
+                            </td>
+                        </tr>
+
+                </table>
+            </fieldset>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>

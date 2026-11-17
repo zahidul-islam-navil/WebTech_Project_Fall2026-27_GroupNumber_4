@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>Performance - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+            
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="attendance.html">Attendance & Leaves</a>
+                <a href="tasks.html">Task Board</a>
+                <a href="performance.html" class="active">Performance</a>
+                <a href="hr-requests.html">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <br>
+
+            <!-- Performance Rating Form -->
+            <div class="dashboard-section">
+                
+                <form onsubmit="return validatePerformanceForm()">
+                    <fieldset id="performance">
+                    <legend>Team Performance Evaluation</legend>
+                    <table>
+                        <tr>
+                            <td><label for="evalMember">Select Member :</label></td>
+                            <td>
+                                <select id="evalMember" name="evalMember">
+                                    <option value="">Choose team member to evaluate</option>
+                                    <option value="EMP-1021">Tariq Rahman</option>
+                                    <option value="EMP-1025">Sadia Islam</option>
+                                    <option value="EMP-1033">Tanvir Hasan</option>
+                                    <option value="EMP-1042">Nusrat Jahan</option>
+                                </select>
+                                <p class="error" id="EvalMemberError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Performance Rating :</label></td>
+                            <td>
+                                <label for="rating5"><input type="radio" name="evalRating" id="rating5" value="5"> 5 - Outstanding</label><br>
+                                <label for="rating4"><input type="radio" name="evalRating" id="rating4" value="4"> 4 - Exceeds Expectations</label><br>
+                                <label for="rating3"><input type="radio" name="evalRating" id="rating3" value="3"> 3 - Meets Expectations</label><br>
+                                <label for="rating2"><input type="radio" name="evalRating" id="rating2" value="2"> 2 - Needs Improvement</label><br>
+                                <label for="rating1"><input type="radio" name="evalRating" id="rating1" value="1"> 1 - Unsatisfactory</label>
+                                <p class="error" id="EvalRatingError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="evalComments">Review Comments :</label></td>
+                            <td>
+                                <textarea id="evalComments" name="evalComments" rows="4" placeholder="Enter evaluation feedback and milestones achieved"></textarea>
+                                <p class="error" id="EvalCommentsError"></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Submit Review">
+                    </fieldset>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>

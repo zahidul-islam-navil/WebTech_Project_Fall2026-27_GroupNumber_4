@@ -1,0 +1,249 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selectors */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f6;
+    color: #222;
+}
+
+form {
+    text-align: center;
+}
+
+h2 {
+    color: #213a47;
+    margin-top: 0;
+    text-align: center;
+}
+
+fieldset {
+    background-color: #f9fbfc;
+    border: 1px solid #d4dce0;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+legend {
+    color: white;
+    background-color: #244957;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    padding: 8px 6px;
+    vertical-align: top;
+}
+
+td:first-child {
+    width: 34%;
+    padding-top: 16px;
+    font-weight: bold;
+    color: #213a47;
+}
+
+/* Header & Logo (Class & ID Selectors) */
+.header {
+    background-color: #244957;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #dce8ec;
+    padding: 0 15px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    padding: 15px 17px;
+    color: #233d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topnav a:hover,
+.topnav a.active {
+    background-color: #347580;
+    color: white;
+}
+
+/* Registration Card Container */
+.reg-form {
+    background-color: white;
+    border: 1px solid #d4dce0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #d5dadd;
+    margin: 35px auto;
+    padding: 28px;
+    width: 92%;
+    max-width: 720px;
+}
+
+/* Multi-Selectors for Form Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+    background-color: white;
+    color: #222;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #347580;
+}
+
+/* Buttons (Multi-Selector & ID Selectors) */
+input[type="submit"],
+input[type="reset"] {
+    width: 45%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 4px;
+}
+
+#submit {
+    background-color: #347580;
+}
+
+#reset {
+    background-color: #6a7880;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    opacity: 0.85;
+}
+
+/* Error, Hint & Result Messages */
+.error {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+    text-align: left;
+}
+
+#regTermsError {
+    text-align: center;
+}
+
+.error:empty,
+#ResultText:empty {
+    display: none;
+}
+
+.hint {
+    color: #53646a;
+    font-size: 13px;
+    margin: 4px 0 0 0;
+    text-align: left;
+}
+
+#ResultText {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#ResultText.success {
+    color: #1b6b2a;
+    background-color: #e3f4e6;
+    border: 1px solid #9fd3a9;
+}
+
+#ResultText.failed {
+    color: #a11b1b;
+    background-color: #fbe5e5;
+    border: 1px solid #efaaaa;
+}
+
+/* Bottom Link & Footer */
+.bottom-link {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.bottom-link a {
+    color: #347580;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    color: #53646a;
+    padding: 20px;
+}
+
+.footer h5 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+
+    td,
+    td:first-child {
+        display: block;
+        width: 100%;
+        padding-bottom: 2px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin: 6px 0 0 0;
+    }
+}

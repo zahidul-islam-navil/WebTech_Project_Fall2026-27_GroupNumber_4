@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>My Profile - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+            
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="attendance.html">Attendance & Leaves</a>
+                <a href="tasks.html">Task Board</a>
+                <a href="performance.html">Performance</a>
+                <a href="hr-requests.html">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html" class="active">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <br>
+
+            <!-- Part A: Lead Profile Details -->
+            <div class="dashboard-section">
+                <fieldset id="profile">
+                <legend>My Profile</legend>
+                <table id="info">
+                    <tr>
+                        <td>Profile Photo :</td>
+                        <td colspan="3"><img src="../../Images/dept-manager/me.jpeg" alt="User Avatar" id="profile-avatar"></td>
+                    </tr>
+                    <tr>
+                        <td>Full Name :</td>
+                        <td>MD Afsan Abid</td>
+                        <td>Username :</td>
+                        <td>afsan_abid</td>
+                    </tr>
+                    <tr>
+                        <td>Role / Actor :</td>
+                        <td>Department Manager </td>
+                        <td>Dept Manager ID :</td>
+                        <td>DM-5845</td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td>afsan@aiub.edu</td>
+                        <td>Phone Number :</td>
+                        <td>01712345678</td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td>Male</td>
+                        <td>Date of Birth :</td>
+                        <td>2002-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>Citizen :</td>
+                        <td>Bangladesh</td>
+                        <td>Current Department :</td>
+                        <td><span id="currentDeptDisplay">Software Engineering</span></td>
+                    </tr>
+                </table>
+                </fieldset>
+            </div>
+
+            <!-- Part B: Change Department -->
+            <div class="dashboard-section">
+                
+                <form onsubmit="return validateChangeDeptForm()">
+                    <fieldset id="cng-dept">
+                    <legend>Change Department</legend>
+                    <table id="dept">
+                        <tr>
+                            <td><label for="newDept">Select New Department :</label></td>
+                            <td>
+                                <select id="newDept" name="newDept">
+                                    <option value="">Select Department</option>
+                                    <option value="Software Engineering">Software Engineering</option>
+                                    <option value="DevOps">DevOps</option>
+                                    <option value="Software Quality Assurance">Software Quality Assurance</option>
+                                    <option value="Cybersecurity & SecOps">Cybersecurity & SecOps</option>
+                                </select>
+                                <p class="error" id="NewDeptError"></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Update Department">
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Part C: Change Password -->
+            <div class="dashboard-section">
+                
+                <form onsubmit="return validateChangePasswordForm()">
+                    <fieldset id="pass">
+                    <legend>Change Password</legend>
+                    <table>
+                        <tr>
+                            <td><label for="currPassword">Current Password :</label></td>
+                            <td>
+                                <input type="password" id="currPassword" name="currPassword" placeholder="Enter current password">
+                                <p class="error" id="CurrPasswordError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="newPassword">New Password :</label></td>
+                            <td>
+                                <input type="password" id="newPassword" name="newPassword" placeholder="Enter new password">
+                                <p class="error" id="NewPasswordError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="confirmNewPassword">Confirm New Password :</label></td>
+                            <td>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword" placeholder="Re-enter new password">
+                                <p class="error" id="ConfirmNewPasswordError"></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Change Password">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>
