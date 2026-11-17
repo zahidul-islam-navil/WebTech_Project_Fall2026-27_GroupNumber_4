@@ -68,7 +68,7 @@ main {
 }
 
 .registration-main {
-    max-width: 600px;
+    max-width: 950px;
 }
 
 h2 {
@@ -173,4 +173,25 @@ footer {
     width: auto;
     padding: 0;
     margin: 0;
+}
+
+/* Registration Form: Label | Input */
+.registration-main .field {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.registration-main .field > label {
+    margin-bottom: 0;
+}
+
+.registration-main .field > .error-message {
+    grid-column: 2;
+}
+
+.registration-main .checkbox-field,
+.registration-main form > .error-message {
+    margin-left: 200px;
 }
