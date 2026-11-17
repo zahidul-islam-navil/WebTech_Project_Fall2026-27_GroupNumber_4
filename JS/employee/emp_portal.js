@@ -201,13 +201,16 @@ function validateRegistration() {
     let dob = validDob();
     let blood = validBlood();
     let address = validAddress();
+    let image = validImage();
     let password = validPassword();
     let confirm = validConfirmPassword();
     let terms = validTerms();
 
     if (name && id && email && phone && emergency && department && position &&
-        gender && dob && blood && address && password && confirm && terms) {
+        gender && dob && blood && address && image && password && confirm && terms) {
         window.location.href = "emp_login.html";
+    } else {
+        document.getElementById("registrationMessage").textContent = "Fill all the fields.";
     }
     return false;
 }
@@ -224,7 +227,9 @@ function clearRegistrationErrors() {
     document.getElementById("regDobError").textContent = "";
     document.getElementById("regBloodError").textContent = "";
     document.getElementById("regAddressError").textContent = "";
+    document.getElementById("regImageError").textContent = "";
     document.getElementById("regPasswordError").textContent = "";
     document.getElementById("regConfirmError").textContent = "";
     document.getElementById("regTermsError").textContent = "";
+    document.getElementById("registrationMessage").textContent = "";
 }

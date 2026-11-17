@@ -175,16 +175,37 @@ footer {
     margin: 0;
 }
 
-/* Registration Form: Label | Input */
+/* Registration Field Groups */
+.registration-main fieldset {
+    border: 1px solid #347580;
+    border-radius: 5px;
+    padding: 18px 22px 6px;
+    margin-bottom: 20px;
+}
+
+.registration-main legend {
+    color: #347580;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* Registration: Label on left, field on right */
 .registration-main .field {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 195px 1fr;
     column-gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 
 .registration-main .field > label {
     margin-bottom: 0;
+    padding-top: 9px;
+}
+
+.registration-main .field > input,
+.registration-main .field > select,
+.registration-main .field > textarea {
+    max-width: 500px;
 }
 
 .registration-main .field > .error-message {
@@ -193,5 +214,24 @@ footer {
 
 .registration-main .checkbox-field,
 .registration-main form > .error-message {
-    margin-left: 200px;
+    margin-left: 0;
+}
+
+.registration-main .checkbox-field label {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Registration Error Box */
+.registration-main .form-error {
+    background-color: #fff0f0;
+    color: #b42323;
+    border: 1px solid #db7777;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 12px 0;
+}
+
+.registration-main .form-error:empty {
+    display: none;
 }
