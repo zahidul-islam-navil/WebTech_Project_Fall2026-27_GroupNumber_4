@@ -109,10 +109,6 @@ input[type="password"] {
     margin: 5px 0;
 }
 
-.error:empty {
-    display: none;
-}
-
 
 input[type="submit"],
 input[type="reset"] {

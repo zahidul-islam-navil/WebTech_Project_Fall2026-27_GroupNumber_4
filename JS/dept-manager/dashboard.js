@@ -34,7 +34,6 @@ function validateTaskDeadline() {
     let parts = deadline.split("-");
     let selectedDate = new Date(parts[0], parts[1] - 1, parts[2]);
     let today = new Date();
-    today.setHours(0, 0, 0, 0);
 
     if (selectedDate < today) {
         error.innerHTML = "Task Deadline cannot be in the past.";
@@ -49,11 +48,11 @@ function validateTaskBreakdown() {
     let error = document.getElementById("BreakdownError");
 
     if (breakdown == "") {
-        error.innerHTML = "Please enter the sub-task breakdown.";
+        error.innerHTML = "Please enter the sub-task description.";
         return false;
     }
     else if (breakdown.length < 5) {
-        error.innerHTML = "Sub-Task Breakdown must be at least 5 characters.";
+        error.innerHTML = "Sub-Task description must be at least 5 characters.";
         return false;
     }
     error.innerHTML = "";
@@ -188,7 +187,7 @@ function validateReqReason() {
         return false;
     }
     else if (reqReason.length < 5) {
-        error.innerHTML = "Business Justification must be at least 5 characters.";
+        error.innerHTML = "Role Description must be at least 5 characters.";
         return false;
     }
     error.innerHTML = "";
