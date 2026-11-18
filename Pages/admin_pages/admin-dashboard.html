@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+
+<body>
+
+    <div class="admin-shell">
+
+
+        <div class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+                <div class="sidebar-title">
+                    <h2>EMSync</h2>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="admin-users.html">User Accounts</a>
+                <a href="admin-employee-directory.html">Employee Directory</a>
+                <a href="admin-tasks.html">Task Assignments</a>
+                <a href="admin-notices.html">Notice Management</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Company Settings</a>
+                <a href="admin-profile.html">My Profile &amp; Security</a>
+            </div>
+
+            <div class="sidebar-footer">
+                EMSync &copy; 2026
+            </div>
+        </div>
+
+
+        <div class="admin-main">
+            <div class="admin-topbar">
+                <div class="topbar-user">
+                    <img src="../../Images/admin_images/navil - Copy.jpg">
+                    <strong>Navil (Admin)</strong>
+                </div>
+                <div class="topbar-actions">
+                    <a href="admin-login.html" class="logout-btn">Sign Out</a>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>Admin Dashboard</h1>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Total Employees</div>
+                        <div class="metric-value">50</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-title">Active Departments</div>
+                        <div class="metric-value">3</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-title">Attendance Rate</div>
+                        <div class="metric-value">87%</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-title">Open Manager Tasks</div>
+                        <div class="metric-value">3</div>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Department Task Overview</legend>
+                    <table class="data-table">
+                        
+                            <tr>
+                                <th>Department</th>
+                                <th>Status Summary</th>
+                                <th>Completion</th>
+                            </tr>
+                        
+                            <tr>
+                                <td><strong>IT Department</strong></td>
+                                <td>14 complete &bull; 4 open</td>
+                                <td> 78% Complete </td>
+                            </tr>
+                            <tr>
+                                <td><strong>HR Management</strong></td>
+                                <td>9 complete &bull; 2 open</td>
+                                <td> 82% Complete </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Finance &amp; Accounts</strong></td>
+                                <td>7 complete &bull; 3 open</td>
+                                <td>70% Complete</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sales &amp; Marketing</strong></td>
+                                <td>11 complete &bull; 3 open</td>
+                                <td>79% Complete</td>
+                            </tr>
+                        
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Needs Immediate Attention</legend>
+                    <table class="data-table">
+                        <tr>
+                            <td> High Priority </td>
+                            <td><strong>3 Overdue Manager Tasks</strong> - IT and Finance units have past deadlines.</td>
+                            <td><a href="admin-tasks.html" class="btn-primary btn-sm">Review Tasks</a></td>
+                        </tr>
+                        <tr>
+                            <td> Pending </td>
+                            <td><strong>2 Pending User Invitations</strong> - Department managers awaiting account
+                                verification.</td>
+                            <td><a href="admin-users.html" class="btn-primary btn-sm">View Invitations</a></td>
+                        </tr>
+                        <tr>
+                            <td> Moderation </td>
+                            <td><strong>1 Flagged Notice</strong> - HR company announcement pending administrative
+                                approval.</td>
+                            <td><a href="admin-notices.html" class="btn-primary btn-sm">Moderate Notice</a></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
