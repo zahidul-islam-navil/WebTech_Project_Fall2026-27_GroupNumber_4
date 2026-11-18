@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Task Assignments</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html">Employee Directory</a>
+            <a href="admin-tasks.html" class="active">Task Assignments</a>
+            <a href="admin-notices.html">Notice Management</a>
+            <a href="admin-reports.html">Reports</a>
+            <a href="admin-settings.html">Company Settings</a>
+            <a href="admin-profile.html">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+
+    <div class="admin-main">
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="page-header">
+                    <h1>Task Assignments (Admin &rarr; Department Managers)</h1>
+            </div>
+
+            <form id="assignTaskForm">
+                <fieldset>
+                    <legend>Assign New Department Task</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="TaskTitle">Task Title:</label></td>
+                            <td>
+                                <input type="text" id="TaskTitle" placeholder="e.g. Prepare monthly operational compliance audit">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskDescription">Description &amp; Deliverables:</label></td>
+                            <td>
+                                <textarea id="TaskDescription" placeholder="Describe expected objectives, deliverables, and guidelines..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskDepartment">Department:</label></td>
+                            <td>
+                                <select id="TaskDepartment">
+                                    <option value="">Select Department</option>
+                                    <option value="IT">Engineering &amp; IT</option>
+                                    <option value="HR">Human Resources</option>
+                                    <option value="Finance">Finance &amp; Accounts</option>
+                                    <option value="Marketing">Marketing &amp; Sales</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskManager">Responsible Manager:</label></td>
+                            <td>
+                                <select id="TaskManager">
+                                    <option value="">Select Manager</option>
+                                    <option value="Sarah Jenkins">Sarah Jenkins (Engineering &amp; IT)</option>
+                                    <option value="Marcus Vance">Marcus Vance (Human Resources)</option>
+                                    <option value="Elena Rostova">Elena Rostova (Finance &amp; Accounts)</option>
+                                    <option value="David Kim">David Kim (Marketing &amp; Sales)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskPriority">Priority:</label></td>
+                            <td>
+                                <select id="TaskPriority">
+                                    <option value="High">High</option>
+                                    <option value="Medium" selected>Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskDeadline">Deadline:</label></td>
+                            <td>
+                                <input type="date" id="TaskDeadline">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="TaskAttachment">Attachment (Optional):</label></td>
+                            <td>
+                                <input type="file" id="TaskAttachment">
+                                <p class="hint">Allowed: PDF, DOC, DOCX (Max: 5 MB)</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="form-buttons">
+                        <input type="submit" id="submit" value="Assign Task to Manager">
+                        <input type="reset" id="reset" value="Reset Fields">
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <h3>Active Manager Task Tracking</h3>
+                </div>
+
+                <table class="data-table" id="tasksTable">
+                    <tr>
+                        <td><strong>Task Title</strong></td>
+                        <td><strong>Department</strong></td>
+                        <td><strong>Assigned Manager</strong></td>
+                        <td><strong>Priority</strong></td>
+                        <td><strong>Deadline</strong></td>
+                        <td><strong>Status</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quarterly Server Migration</strong></td>
+                        <td>Engineering &amp; IT</td>
+                        <td>Sadia Chowdhury</td>
+                        <td>High</td>
+                        <td>2026-11-30</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Employee Annual Appraisals</strong></td>
+                        <td>Human Resources</td>
+                        <td>Rafiqul Islam</td>
+                        <td>High</td>
+                        <td>2026-11-20</td>
+                        <td>Overdue</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fiscal Year Budget Forecast</strong></td>
+                        <td>Finance &amp; Accounts</td>
+                        <td>Farzana Yeasmin</td>
+                        <td>Medium</td>
+                        <td>2026-12-15</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Brand Campaign Q4 Launch</strong></td>
+                        <td>Marketing &amp; Sales</td>
+                        <td>Tanvir Hasan</td>
+                        <td>Low</td>
+                        <td>2026-12-05</td>
+                        <td>Completed</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

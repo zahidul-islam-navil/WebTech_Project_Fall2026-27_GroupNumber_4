@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Reports Center</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html">Employee Directory</a>
+            <a href="admin-tasks.html">Task Assignments</a>
+            <a href="admin-notices.html">Notice Management</a>
+            <a href="admin-reports.html" class="active">Reports</a>
+            <a href="admin-settings.html">Company Settings</a>
+            <a href="admin-profile.html">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+
+    <div class="admin-main">
+
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="page-header">
+                    <h1>Administrative Reports Center</h1>
+            </div>
+
+            <form id="reportForm" onsubmit="alert('Report generated successfully!'); return false;">
+                <fieldset>
+                    <legend>Configure Report Parameters</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="ReportCategory">Report Category:</label></td>
+                            <td>
+                                <select id="ReportCategory">
+                                    <option value="">Select Report Type</option>
+                                    <option value="Attendance Summary">Organization Attendance Summary</option>
+                                    <option value="Task Execution">Department Task Completion Rate</option>
+                                    <option value="System Account Status">User Accounts &amp; Onboarding Status</option>
+                                    <option value="Audit & Access">Security Access &amp; Login Audit</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ReportDept">Department Filter:</label></td>
+                            <td>
+                                <select id="ReportDept">
+                                    <option value="All Departments">All Departments</option>
+                                    <option value="Engineering & IT">Engineering &amp; IT</option>
+                                    <option value="Human Resources">Human Resources</option>
+                                    <option value="Finance & Accounts">Finance &amp; Accounts</option>
+                                    <option value="Marketing & Sales">Marketing &amp; Sales</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="StartDate">Start Date:</label></td>
+                            <td>
+                                <input type="date" id="StartDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="EndDate">End Date:</label></td>
+                            <td>
+                                <input type="date" id="EndDate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Export Format:</label></td>
+                            <td>
+                                <label class="choice"><input type="radio" name="exportFormat" value="PDF" checked> PDF Document</label>
+                                <label class="choice"><input type="radio" name="exportFormat" value="CSV"> CSV Spreadsheet</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="form-buttons">
+                        <input type="submit" id="submit" value="Generate &amp; Preview Report">
+                        <input type="reset" id="reset" value="Reset Parameters">
+                    </div>
+                </fieldset>
+            </form>
+
+            <!-- Report Output Preview Table -->
+            <div class="table-card" id="reportPreviewCard" style="display: none;">
+                <div class="table-toolbar">
+                    <h3 id="previewTitle">Generated Report Preview</h3>
+                    <button type="button">Download Export File</button>
+                </div>
+                <table class="data-table" id="reportPreviewTable">
+                    <thead>
+                        <tr>
+                            <th>Metric / Entity</th>
+                            <th>Target Total</th>
+                            <th>Achieved / Active</th>
+                            <th>Compliance %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportPreviewBody">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Tasks</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html">Leave</a>
+            <a href="emp_tasks.html" class="active">Tasks</a>
+            <a href="emp_payslips.html">Payslips</a>
+            <a href="emp_notices.html">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Assigned Tasks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Current Status</th>
+                    <th>Change Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Check website forms</td>
+                    <td>20 Nov 2026</td>
+                    <td id="task1Status">In Progress</td>
+                    <td>
+                        <select id="task1Choice">
+                            <option>Pending</option>
+                            <option selected>In Progress</option>
+                            <option>Completed</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button" id="task1Button">Update</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Update employee information page</td>
+                    <td>24 Nov 2026</td>
+                    <td id="task2Status">Pending</td>
+                    <td>
+                        <select id="task2Choice">
+                            <option selected>Pending</option>
+                            <option>In Progress</option>
+                            <option>Completed</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button" id="task2Button">Update</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prepare meeting notes</td>
+                    <td>27 Nov 2026</td>
+                    <td id="task3Status">Pending</td>
+                    <td>
+                        <select id="task3Choice">
+                            <option selected>Pending</option>
+                            <option>In Progress</option>
+                            <option>Completed</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button" id="task3Button">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>

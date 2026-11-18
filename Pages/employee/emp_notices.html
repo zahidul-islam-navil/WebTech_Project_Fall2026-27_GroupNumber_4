@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Notices</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html">Leave</a>
+            <a href="emp_tasks.html">Tasks</a>
+            <a href="emp_payslips.html">Payslips</a>
+            <a href="emp_notices.html" class="active">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div>
+
+            <div class="notice">
+                <h2 id="notice1Title">Attendance Reminder</h2>
+                <p>All employees are requested to check their attendance records by the end of November.</p>
+                <p class="subtext">HR Department - 15 Nov 2026</p>
+                <button type="button" id="notice1Button">Mark as Read</button>
+            </div>
+
+            <div class="notice">
+                <h2 id="notice2Title">Team Meeting</h2>
+                <p>A department meeting is scheduled for Wednesday afternoon.</p>
+                <p class="subtext">HR Department - 12 Nov 2026</p>
+                <button type="button" id="notice2Button">Mark as Read</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>

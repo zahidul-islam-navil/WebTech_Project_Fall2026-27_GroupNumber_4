@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html">Leave</a>
+            <a href="emp_tasks.html">Tasks</a>
+            <a href="emp_payslips.html">Payslips</a>
+            <a href="emp_notices.html">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html" class="active">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div class="employee-information">
+            <h2>My Information</h2>
+
+            <div class="employee-image">
+                <img src="../../Images/employee_image/emp.jpg">
+            </div>
+
+            <div class="info-rows">
+                <div>
+                    <p>Name</p>
+                    <p><b>Kazi Shafiqul Alam</b></p>
+                </div>
+
+                <div>
+                    <p>Employee ID</p>
+                    <p><b>EMP-1042</b></p>
+                </div>
+
+                <div>
+                    <p>Department</p>
+                    <p><b>Software Engineering</b></p>
+                </div>
+
+                <div>
+                    <p>Position</p>
+                    <p><b>Frontend Developer</b></p>
+                </div>
+
+                <div>
+                    <p>Gender</p>
+                    <p><b>Male</b></p>
+                </div>
+
+                <div>
+                    <p>Date of Birth</p>
+                    <p><b>2004-05-15</b></p>
+                </div>
+
+                <div>
+                    <p>Blood Group</p>
+                    <p><b>B+</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Update Contact Details</h2>
+
+            <form onsubmit="return validateProfile()" novalidate>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <p id="emailError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="01XXXXXXXXX">
+                    <p id="phoneError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="emergency">Emergency Contact</label>
+                    <input type="tel" id="emergency" placeholder="01XXXXXXXXX">
+                    <p id="emergencyError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter address"></textarea>
+                    <p id="addressError" class="error-message"></p>
+                </div>
+
+                <p id="profileMessage"></p>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Change Password</h2>
+
+            <form id="passwordForm" onsubmit="return validatePassword()" novalidate>
+
+                <div class="field">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" placeholder="Enter current password">
+                    <p id="currentPasswordError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" placeholder="Enter new password">
+                    <p id="newPasswordError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                    <p id="confirmPasswordError" class="error-message"></p>
+                </div>
+
+                <p id="passwordMessage"></p>
+
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+
+        <div class="contact-information">
+            <h2>Contact Information</h2>
+
+            <div class="info-rows">
+                <div>
+                    <p>Email</p>
+                    <p><b id="shownEmail">24-58488-2@student.aiub.edu</b></p>
+                </div>
+
+                <div>
+                    <p>Phone Number</p>
+                    <p><b id="shownPhone">01817500928</b></p>
+                </div>
+
+                <div>
+                    <p>Emergency Contact</p>
+                    <p><b id="shownEmergency">01711111111</b></p>
+                </div>
+
+                <div>
+                    <p>Address</p>
+                    <p><b id="shownAddress">Dhaka, Bangladesh</b></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>
