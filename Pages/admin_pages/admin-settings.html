@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Company Settings</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html">Employee Directory</a>
+            <a href="admin-tasks.html">Task Assignments</a>
+            <a href="admin-notices.html">Notice Management</a>
+            <a href="admin-reports.html">Reports</a>
+            <a href="admin-settings.html" class="active">Company Settings</a>
+            <a href="admin-profile.html">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+        <div class="admin-main">
+
+
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="page-header">
+                <div>
+                    <h1>Company Settings</h1>
+                </div>
+            </div>
+
+            <form id="settingsForm">
+                <fieldset>
+                    <legend>Work Schedule &amp; Hours</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label>Working Days: </label></td>
+                            <td>
+                                <label class="choice"><input type="checkbox" name="workday" value="Sun" checked> Sunday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Mon" checked> Monday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Tue" checked> Tuesday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Wed" checked> Wednesday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Thu" checked> Thursday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Fri"> Friday</label>
+                                <label class="choice"><input type="checkbox" name="workday" value="Sat"> Saturday</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="OfficeStart">Office Start Time: </label></td>
+                            <td>
+                                <input type="text" id="OfficeStart" value="09:00 AM">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="OfficeEnd">Office End Time: </label></td>
+                            <td>
+                                <input type="text" id="OfficeEnd" value="05:00 PM">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Leave &amp; Attendance Policy</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="AnnualPaidLeave">Annual Paid Leave (Days): </label></td>
+                            <td>
+                                <input type="number" id="AnnualPaidLeave" value="20" min="0" max="60">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="SickLeave">Sick Leave (Days): </label></td>
+                            <td>
+                                <input type="number" id="SickLeave" value="14" min="0" max="30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="MaxLateGrace">Late Grace Period (Minutes): </label></td>
+                            <td>
+                                <input type="number" id="MaxLateGrace" value="10">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <input type="submit" id="submit" value="Save Settings">
+                    <input type="reset" id="reset" value="Reset Defaults">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

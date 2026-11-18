@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Admin Registration</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+    <script src="../../JS/admin_js/admin-register.js"></script>
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-header">
+            <img src="../../Images/ems-logo.jpg">
+            <h1>Admin Registration Form</h1>
+            <p>Employee Management System</p>
+        </div>
+
+        <form id="adminRegisterForm" onsubmit="return validateRegister()" onreset="clearAllErrors()" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table class="form-table">
+                    <tr>
+                        <td><label for="FullName">Full Name: </label></td>
+                        <td>
+                            <input type="text" id="FullName" placeholder="e.g. Md. Zahidul Islam Navil">
+                            <p class="nameError" id="NameError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Username">Username: </label></td>
+                        <td>
+                            <input type="text" id="Username" placeholder="e.g. pengvil">
+                            <p class="userError" id="UserError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="DOB">Date of Birth: </label></td>
+                        <td>
+                            <input type="date" id="DOB">
+                            <p class="dobError" id="DOBError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Gender: </label></td>
+                        <td>
+                            <label class="choice"><input type="radio" name="gender" value="Male"> Male</label>
+                            <label class="choice"><input type="radio" name="gender" value="Female"> Female</label>
+                            <p class="genderError" id="GenderError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="NidNumber">NID Number: </label></td>
+                        <td>
+                            <input type="text" id="NidNumber" placeholder="e.g. 1234567890">
+                            <p class="nidError" id="NidError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Photo">Photo: </label></td>
+                        <td>
+                            <input type="file" id="Photo" name="Photo">
+                            <p class="photoError" id="PhotoError"></p>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Admin Information</legend>
+                <table class="form-table">
+                    <tr>
+                        <td><label for="AdminID">Admin ID: </label></td>
+                        <td>
+                            <input type="text" id="AdminID" value="ADM-01" readonly style="background-color: #eef2f7; font-weight: bold;">
+                            <p class="idError" id="AdminIDError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="WorkEmail">Work Email: </label></td>
+                        <td>
+                            <input type="email" id="WorkEmail" placeholder="e.g. xyz@emsync.corp">
+                            <p class="emailError" id="EmailError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="MobileNumber">Mobile Number: </label></td>
+                        <td>
+                            <input type="tel" id="MobileNumber" placeholder="e.g. 01XXXXXXXXX">
+                            <p class="phoneError" id="PhoneError"></p>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Security Information</legend>
+                <table class="form-table">
+                    <tr>
+                        <td><label for="Password">Password: </label></td>
+                        <td>
+                            <input type="password" id="Password" placeholder="e.g. Admin@123">
+                            <p class="hint">Must be at least 8 characters, contain at least 1 uppercase letter, 1 number, and 1 special character (_, @, &, $)</p>
+                            <p class="passwordError" id="PasswordError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ConfirmPassword">Confirm Password: </label></td>
+                        <td>
+                            <input type="password" id="ConfirmPassword" placeholder="e.g. Admin@123">
+                            <p class="confirmError" id="ConfirmError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="SecretCode">Secret Code: </label></td>
+                        <td>
+                            <input type="text" id="SecretCode">
+                            <p class="secretError" id="SecretError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="SecurityQuestion">Recovery Question: </label></td>
+                        <td>
+                            <select id="SecurityQuestion">
+                                <option value="">Select a Question</option>
+                                <option value="What was the name of your first school?">What was the name of your first school?</option>
+                                <option value="What is the name of your best friend?">What is the name of your best friend?</option>
+                                <option value="What is your birthplace?">What is your birthplace?</option>
+                            </select>
+                            <p class="securityQError" id="SecurityQError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="SecurityAnswer">Recovery Answer: </label></td>
+                        <td>
+                            <input type="text" id="SecurityAnswer" placeholder="e.g. St. Joseph">
+                            <p class="securityAnsError" id="SecurityAnsError"></p>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <div class="form-buttons">
+                <input type="submit" id="submit" value="Register">
+                <input type="reset" id="reset" value="Reset">
+            </div>
+        </form>
+
+        <div class="auth-footer">
+            Already registered? <a href="admin-login.html">Sign in</a> <br><br> <a href="../../index.html">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
