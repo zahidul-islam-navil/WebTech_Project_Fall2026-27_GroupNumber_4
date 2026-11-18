@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Management - EMSync</title>
+<link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+</head>
+
+<body class="employee_page">
+
+    <nav class="dashboard_nav">
+
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+        <div class="dashboard_links">
+            <a href="hr_dashboard.html">Dashboard</a>
+            <a href="hr_employee.html">Employees</a>
+            <a href="hr_notice.html" class="active">Notices</a>
+            <a href="hr_leave.html">Leave</a>
+            <a href="hr_attendance.html">Attendance</a>
+            <a href="hr_payroll.html">Payroll</a>
+            <a href="hr_recruitment.html">Recruitment</a>
+            <a href="hr_performance.html">Performance</a>
+        </div>
+
+        <div class="dashboard_logout">
+            <a href="hr_login.html">Logout</a>
+        </div>
+
+    </nav>
+
+    <main class="employee_main">
+
+        <fieldset class="employee_fieldset">
+
+            <h2>Notice Management</h2>
+
+            <form>
+
+                <div class="field">
+                    <label for="noticeTitle">Notice Title</label>
+                    <input type="text" id="noticeTitle"
+                           placeholder="Enter notice title" required>
+                </div>
+
+                <div class="field">
+                    <label for="noticeDescription">Notice Description</label>
+                    <textarea id="noticeDescription" rows="4" placeholder="Enter notice description"required></textarea>
+                </div>
+
+                <div class="form_btn">
+                    <button type="button">Add Notice</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+
+            </form>
+
+            <div class="employee_form">
+
+                <h2>Published Notices</h2>
+
+                <div class="employee_table">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Notice Title</th>
+                                <th>Notice Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Monthly Staff Meeting</td>
+                                <td>All employees are requested to attend
+                                    the monthly staff meeting on Thursday.</td>
+                                <td>
+                                    <button type="button"class="delete_btn">Delete</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Office Holiday</td>
+                                <td>The office will remain closed on Friday
+                                    due to a public holiday.</td>
+                                <td>
+                                    <button type="button" class="delete_btn">Delete</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>
