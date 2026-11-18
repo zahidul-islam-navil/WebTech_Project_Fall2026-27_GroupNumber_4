@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
@@ -95,9 +95,10 @@
                     </table>
 
                     <div class="form-buttons">
-                        <input type="submit" id="submit" value="Send Secure Invitation">
+                        <input type="submit" id="submit" value="Send Invitation">
                         <input type="reset" id="reset" value="Reset Form">
                     </div>
+                    
                 </fieldset>
             </form>
 
@@ -105,7 +106,7 @@
                 <div class="table-toolbar">
                     <h3>Active System Accounts &amp; Invitations</h3>
                     <div class="table-filters">
-                        <select id="roleFilter">
+                        <select id="roleFilter" onchange="filterUsersByRole()">
                             <option value="all">All Roles</option>
                             <option value="HR Manager">HR Manager</option>
                             <option value="Department Manager">Department Manager</option>
@@ -116,46 +117,48 @@
                 </div>
 
                 <table class="data-table" id="usersTable">
-                    <tr>
-                        <td><strong>User Name</strong></td>
-                        <td><strong>Work Email</strong></td>
-                        <td><strong>Role</strong></td>
-                        <td><strong>Department</strong></td>
-                        <td><strong>Status</strong></td>
-                        <td><strong>Action</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Zahidul Islam Navil</strong></td>
-                        <td>navil@emsync.corp</td>
-                        <td>Administrator</td>
-                        <td>System Ops</td>
-                        <td>Active</td>
-                        <td><strong> Primary Admin </strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arafat Hossain</strong></td>
-                        <td>abid@emsync.corp</td>
-                        <td>HR Manager</td>
-                        <td>Human Resources</td>
-                        <td>Active</td>
-                        <td><button type="button">Deactivate</button></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Afsan Abid</strong></td>
-                        <td>abid.it@emsync.corp</td>
-                        <td>Department Manager</td>
-                        <td>Engineering &amp; IT</td>
-                        <td>Active</td>
-                        <td><button type="button">Deactivate</button></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Kazi Shafiqul Alam</strong></td>
-                        <td>qz@emsync.corp</td>
-                        <td>Employee</td>
-                        <td>Marketing &amp; Sales</td>
-                        <td>Invited</td>
-                        <td><button type="button">Resend</button></td>
-                    </tr>
+                    <th>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Work Email</th>
+                            <th>Role</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </th>
+                        <tr>
+                            <td><strong>Zahidul Islam Navil</strong></td>
+                            <td>navil@emsync.corp</td>
+                            <td>Administrator</td>
+                            <td>System Ops</td>
+                            <td>Active</td>
+                            <td><strong> Primary Admin </strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arafat Hossain</strong></td>
+                            <td>sakib_hr@emsync.corp</td>
+                            <td>HR Manager</td>
+                            <td>Human Resources</td>
+                            <td>Active</td>
+                            <td><button type="button" class="btn-danger btn-sm" onclick="toggleUserStatus(this)">Deactivate</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Afsan Abid</strong></td>
+                            <td>abid_it@emsync.corp</td>
+                            <td>Department Manager</td>
+                            <td>Engineering &amp; IT</td>
+                            <td>Active</td>
+                            <td><button type="button" class="btn-danger btn-sm" onclick="toggleUserStatus(this)">Deactivate</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kazi Shafiqul Alam</strong></td>
+                            <td>qz_mkt@emsync.corp</td>
+                            <td>Employee</td>
+                            <td>Marketing &amp; Sales</td>
+                            <td><span class="badge badge-warning">Invited</span></td>
+                            <td><button type="button" class="btn-primary btn-sm" onclick="resendInvite('tanvir.h@emsync.corp')">Resend</button></td>
+                        </tr>
                 </table>
             </div>
 
