@@ -321,7 +321,6 @@ function updateLeave(button, status) {
     let row = button.closest("tr");
     let employeeName = row.cells[0].innerText;
     row.cells[4].innerHTML = "<strong>" + status + "</strong>";
-    // alert("Leave request for " + employeeName + " marked as " + status + ".");
 }
 
 function reportProgress(taskId) {
