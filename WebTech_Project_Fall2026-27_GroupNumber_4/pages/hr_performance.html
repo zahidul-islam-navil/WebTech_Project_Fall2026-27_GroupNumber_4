@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Management - EMSync</title>
+    <link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+    <link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+    <script src="../JS/hr_script.js" defer></script>
+</head>
+
+<body class="employee_page">
+
+    <nav class="dashboard_nav">
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+        <div class="dashboard_links">
+            <a href="hr_dashboard.html">Dashboard</a>
+            <a href="hr_employee.html">Employees</a>
+            <a href="hr_notice.html">Notices</a>
+            <a href="hr_leave.html">Leave</a>
+            <a href="hr_attendance.html">Attendance</a>
+            <a href="hr_payroll.html">Payroll</a>
+            <a href="hr_recruitment.html">Recruitment</a>
+            <a href="hr_performance.html" class="active">Performance</a>
+        </div>
+
+        <div class="dashboard_logout">
+            <a href="hr_login.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="employee_main">
+        <fieldset class="employee_fieldset">
+
+            <h2>Performance Management</h2>
+
+            <form onsubmit="return saveReview()">
+
+                <div class="field">
+                    <label for="reviewName">Employee Name</label>
+                    <input type="text" id="reviewName"
+                           placeholder="Enter employee name" required>
+                </div>
+
+                <div class="field">
+                    <label>Performance Rating</label>
+
+                    <div class="rating_options">
+                        <label><input type="radio" name="rating" value="1"> 1</label>
+                        <label><input type="radio" name="rating" value="2"> 2</label>
+                        <label><input type="radio" name="rating" value="3"> 3</label>
+                        <label><input type="radio" name="rating" value="4"> 4</label>
+                        <label><input type="radio" name="rating" value="5"> 5</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="reviewComment">Comment</label>
+                    <textarea id="reviewComment" rows="4"
+                              placeholder="Write performance comments"
+                              required></textarea>
+                </div>
+
+                <div class="form_btn">
+                    <button type="submit">Save Review</button>
+                </div>
+
+                <p id="reviewMessage" style="text-align: center;"></p>
+
+            </form>
+
+        </fieldset>
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+    <link rel="stylesheet" href="../../design/common.css">
+    <script src="../JS/hr_js/hr_script.js"></script>
+    <title>Login</title>
+    </head>
+    
+    <body>
+        <header class="pagehead">
+            <div class="logo">
+                <img src="../images/ems-logo.jpg"alt="EMSync Logo" height="50" width="50">
+                <h3>EMSync</h3>
+            </div>
+        </header>
+
+        <nav class="page_nav">
+            <div class="nav_item">
+             <a href="index.html">Home</a>
+            <a href="hr_login.html" class="active">Login</a>
+            <a href="hr_registration.html">Registration</a>
+            </div>
+        </nav>
+        <main class="login_main">
+            <h2>HR Login</h2>
+            <form id="login" onsubmit="return validatelogin()" onreset="clearloginerror()" novalidate>
+
+                 <div class="field">
+                 <label for="loginid" >HR ID</label>
+                <input type="text" id="loginid" placeholder="Enter HR ID">
+                 <p  id="loginiderr" class="err_msg"></p>
+                </div>
+
+                <div class="field">
+                <label for="loginpassword">Password</label>
+                <input type="password" id="loginpassword" placeholder="Enter Password">
+                <p id="passerr" class="err_msg"></p>
+                </div>
+                
+                <div class="checkbox_field">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Rememeber Me</label>
+                </div>
+
+                <div class="form_btn">
+                    <button type="submit">Login</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+            </form>
+            <p class="bottom-link">Don't have an account? <a href="hr_registration.html">Register</a></p>
+        </main>
+        <footer>EMSynch &copy; 2026</footer>
+    </body>
+    
+
+</html>

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management - EMSync</title>
+<link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+</head>
+
+<body class="employee_page">
+
+    <nav class="dashboard_nav">
+
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+        <div class="dashboard_links">
+            <a href="hr_dashboard.html">Dashboard</a>
+            <a href="hr_employee.html">Employees</a>
+            <a href="hr_notice.html">Notices</a>
+            <a href="hr_leave.html" class="active">Leave</a>
+            <a href="hr_attendance.html">Attendance</a>
+            <a href="hr_payroll.html">Payroll</a>
+            <a href="hr_recruitment.html">Recruitment</a>
+            <a href="hr_performance.html">Performance</a>
+        </div>
+
+        <div class="dashboard_logout">
+            <a href="hr_login.html">Logout</a>
+        </div>
+
+    </nav>
+    <main class="employee_main">
+
+        <fieldset class="employee_fieldset">
+
+            <h2>Leave Management</h2>
+
+            <div class="employee_table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Leave Type</th>
+                            <th>Number of Days</th>
+                            <th>Medical Report</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Kamal Naser</td>
+                            <td>Medical Leave</td>
+                            <td>3 Days</td>
+                            <td>
+                                <button type="button">Show Report</button>
+                            </td>
+                            <td>
+                                <button type="button">Approve</button>
+                                <button type="button"class="delete_btn">Reject</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Jamshed Mojumder</td>
+                            <td>Vacation Leave</td>
+                            <td>5 Days</td>
+                            <td>Not Required</td>
+                            <td>
+                                <button type="button">Approve</button>
+                                <button type="button"class="delete_btn">Reject</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Tanvir Hasan</td>
+                            <td>Casual Leave</td>
+                            <td>2 Days</td>
+                            <td>Not Required</td>
+                            <td>
+                                <button type="button">Approve</button>
+                                <button type="button"class="delete_btn">Reject</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </fieldset>
+
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>
