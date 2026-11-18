@@ -1,9 +1,7 @@
-/* Universal Selector */
 * {
     box-sizing: border-box;
 }
 
-/* Element Selectors */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -56,7 +54,7 @@ td:first-child {
     color: #213a47;
 }
 
-/* Header & Logo (Class & ID Selectors) */
+
 .header {
     background-color: #244957;
     padding: 12px 30px;
@@ -78,7 +76,6 @@ td:first-child {
     margin: 0;
 }
 
-/* Navigation Bar */
 .topnav {
     overflow: hidden;
     background-color: #dce8ec;
@@ -100,7 +97,6 @@ td:first-child {
     color: white;
 }
 
-/* Registration Card Container */
 .reg-form {
     background-color: white;
     border: 1px solid #d4dce0;
@@ -112,7 +108,6 @@ td:first-child {
     max-width: 720px;
 }
 
-/* Multi-Selectors for Form Inputs */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -133,7 +128,7 @@ input[type="checkbox"] {
     accent-color: #347580;
 }
 
-/* Buttons (Multi-Selector & ID Selectors) */
+
 input[type="submit"],
 input[type="reset"] {
     width: 45%;
@@ -160,7 +155,7 @@ input[type="reset"]:hover {
     opacity: 0.85;
 }
 
-/* Error, Hint & Result Messages */
+
 .error {
     color: red;
     font-size: 13px;
@@ -204,7 +199,7 @@ input[type="reset"]:hover {
     border: 1px solid #efaaaa;
 }
 
-/* Bottom Link & Footer */
+
 .bottom-link {
     text-align: center;
     margin-top: 22px;
@@ -227,7 +222,7 @@ input[type="reset"]:hover {
     font-weight: normal;
 }
 
-/* Responsive Layout */
+
 @media (max-width: 600px) {
     .topnav a {
         float: none;

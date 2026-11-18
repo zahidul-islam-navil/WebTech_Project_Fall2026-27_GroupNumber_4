@@ -261,8 +261,6 @@ function collect_data() {
         alert("Form submitted successfully!");
         return true;
     }
-
-    // alert("Please fix the errors in the form.");
     return false;
 }
 

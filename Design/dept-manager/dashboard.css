@@ -105,15 +105,7 @@ input[type="date"] {
     background-color: #fff;
 }
 
-/* select:focus,
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus {
-    outline: none;
-    border-color: #347580;
-} */
+
 
 button,
 input[type="button"],
@@ -190,9 +182,6 @@ fieldset input[type="submit"] {
 }
 
 
-/* .container {
-    width: 100%;
-} */
 
 .header {
     background-color: #244957;
@@ -289,9 +278,7 @@ fieldset h3 {
     margin: 5px 0 0;
 }
 
-/* .error:empty {
-    display: none;
-} */
+
 
 .report-btn {
     padding: 7px 14px;
@@ -354,7 +341,7 @@ fieldset h3 {
     width: 210px;
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 900px) {
     .counting-pane {
         grid-template-columns: repeat(2, 1fr);

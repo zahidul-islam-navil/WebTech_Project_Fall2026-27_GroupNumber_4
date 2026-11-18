@@ -151,10 +151,6 @@ function validatePerformanceForm() {
 }
 
 
-// ======================================================================
-// 3. HR REQUESTS VALIDATION (hr-requests.html)
-// ======================================================================
-
 function validateRequestType() {
     let requestType = document.getElementById("requestType");
     let error = document.getElementById("ReqTypeError");
@@ -217,10 +213,6 @@ function validateHRRequestForm() {
 }
 
 
-// ======================================================================
-// 4. CHANGE DEPARTMENT VALIDATION (profile.html)
-// ======================================================================
-
 function validateNewDept() {
     let newDept = document.getElementById("newDept");
     let error = document.getElementById("NewDeptError");
@@ -250,9 +242,6 @@ function validateChangeDeptForm() {
 }
 
 
-// ======================================================================
-// 5. CHANGE PASSWORD VALIDATION (profile.html)
-// ======================================================================
 
 function validateCurrPassword() {
     let currPassword = document.getElementById("currPassword").value;
@@ -328,10 +317,6 @@ function validateChangePasswordForm() {
     return false;
 }
 
-
-// ======================================================================
-// 6. OPERATIONAL ACTIONS (attendance.html & tasks.html)
-// ======================================================================
 
 function updateLeave(button, status) {
     let row = button.closest("tr");

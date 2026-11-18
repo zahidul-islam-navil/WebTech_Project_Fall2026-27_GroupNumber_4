@@ -1,4 +1,3 @@
-/* General Design */
 * {
     box-sizing: border-box;
 }
@@ -10,7 +9,7 @@ body {
     color: #222;
 }
 
-/* Header */
+
 .header {
     background-color: #244957;
     padding: 12px 30px;
@@ -31,7 +30,7 @@ body {
     margin: 0;
 }
 
-/* Navigation */
+
 .topnav {
     overflow: hidden;
     background-color: #dce8ec;
@@ -52,7 +51,7 @@ body {
     color: white;
 }
 
-/* Login Box */
+
 .login {
     background-color: white;
     border: 1px solid #d4dce0;
@@ -83,7 +82,6 @@ form {
     text-align: center;
 }
 
-/* Form Fields */
 .field {
     margin-bottom: 14px;
     text-align: left;
@@ -115,7 +113,7 @@ input[type="password"] {
     display: none;
 }
 
-/* Buttons and Links */
+
 input[type="submit"],
 input[type="reset"] {
     color: white;
