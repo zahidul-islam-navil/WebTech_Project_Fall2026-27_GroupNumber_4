@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f6;
+    color: #222;
+}
+
+label {
+    font-weight: bold;
+    color: #213a47;
+}
+
+legend {
+    background-color: #244957;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin-top: 12px;
+}
+
+
+h1,
+h2,
+h3 {
+    color: #213a47;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.counting-pane{
+    width: 95%;
+    max-width: 1500px;
+    margin: 25px auto;
+    padding: 25px;
+}
+.dashboard-section,
+fieldset {
+    width: 95%;
+    max-width: 1500px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #d4dce0;
+    border-radius: 12px;
+}
+
+
+.counting-card {
+    background-color: #edf3f4;
+    border: 1px solid #96adb5;
+    border-radius: 5px;
+}
+
+.counting-label,
+.counting-value {
+    font-weight: bold;
+    color: #213a47;
+}
+
+.summary-link,
+#notice-all td a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #347580;
+    text-decoration: none;
+}
+
+.summary-link:hover,
+#notice-all td a:hover {
+    color: grey;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #96adb5;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #222;
+    background-color: #fff;
+}
+
+
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    background-color: #347580;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    opacity: 0.75;
+}
+
+.assign-btn,
+fieldset input[type="submit"] {
+    padding: 11px 22px;
+    font-size: 15px;
+}
+
+#notice td:first-child,
+#attendance-summary td:first-child,
+#sub-tasks td:first-child,
+#hr-requests td:first-child,
+#performance td:first-child,
+#dept td:first-child,
+#pass td:first-child {
+    font-weight: bold;
+    color: #213a47;
+    width: 220px;
+}
+
+
+
+#team-notice th,
+#team-notice td,
+#attandence th,
+#attandence td,
+#leave th,
+#leave td,
+#tasks th,
+#tasks td,
+#report th,
+#report td,
+#notice-all th,
+#notice-all td {
+    border: 1px solid #cad4d9;
+    padding: 12px;
+}
+
+#team-notice th,
+#attandence th,
+#leave th,
+#tasks th,
+#report th,
+#notice-all th {
+    background-color: #dce8ec;
+    color: #213a47;
+}
+
+.footer h5,
+.footer h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+
+.header {
+    background-color: #244957;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.topnav {
+    background-color: lightsteelblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 15px;
+    
+}
+
+.topnav a {
+    padding: 15px 17px;
+    color: #233d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topnav a:hover {
+    background-color: grey;
+    color: white;
+}
+.topnav a.active {
+    background-color: #347580;
+    color: white;
+}
+
+.topnav a:last-child {
+    margin-left: auto;
+    background-color: #be3434;
+    color: white;
+}
+
+.topnav a:last-child:hover {
+    background-color: grey;
+    color: white;
+}
+
+.counting-pane {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.counting-card {
+    display: block;
+    padding: 17px;
+}
+
+.counting-label {
+    font-size: 15px;
+    margin: 0 0 10px;
+}
+
+.counting-value {
+    font-size: 23px;
+    margin: 0 0 12px;
+}
+
+.summary-item {
+    display: inline-block;
+    margin-right: 24px;
+    color: #213a47;
+}
+
+.dashboard-section fieldset {
+    width: 100%;
+    margin: 0;
+}
+
+fieldset h3 {
+    font-size: 20px;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dce8ec;
+}
+
+.error {
+    color: #be3434;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+
+
+.report-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+}
+
+.reject-btn {
+    background-color: #be3434;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #53646a;
+}
+
+#logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #347580;
+}
+
+
+#leave input[type="button"] {
+    padding: 6px 12px;
+    margin-right: 6px;
+}
+
+#performance input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+    accent-color: #347580;
+    cursor: pointer;
+}
+
+#performance td:nth-child(2) label {
+    display: inline-block;
+    font-weight: normal;
+    color: #222;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+#info td {
+    vertical-align: middle;
+}
+
+#info td:nth-child(odd) {
+    font-weight: bold;
+    color: #213a47;
+    width: 210px;
+}
+
+
+@media (max-width: 900px) {
+    .counting-pane {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    #sub-tasks td,
+    #hr-requests td,
+    #performance td,
+    #info td,
+    #dept td,
+    #pass td {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+    }
+
+    #sub-tasks td:first-child,
+    #hr-requests td:first-child,
+    #performance td:first-child,
+    #info td:nth-child(odd),
+    #dept td:first-child,
+    #pass td:first-child {
+        padding-top: 12px;
+    }
+
+    .summary-item {
+        display: block;
+        margin: 4px 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .counting-pane {
+        grid-template-columns: 1fr;
+    }
+}

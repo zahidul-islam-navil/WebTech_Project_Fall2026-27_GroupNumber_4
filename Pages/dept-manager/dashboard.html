@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>Dashboard - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="attendance.html">Attendance & Leaves</a>
+                <a href="tasks.html">Task Board</a>
+                <a href="performance.html">Performance</a>
+                <a href="hr-requests.html">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <div class="counting-pane">
+                <div class="counting-card">
+                    <p class="counting-label">Team Attendance</p>
+                    <p class="counting-value">8 / 15</p>
+                    <a href="attendance.html" class="summary-link">View Attendance</a>
+                </div>
+                <div class="counting-card">
+                    <p class="counting-label">Admin Task Alerts</p>
+                    <p class="counting-value">3 Ongoing</p>
+                    <a href="tasks.html" class="summary-link">Assign Tasks</a>
+                </div>
+                <div class="counting-card">
+                    <p class="counting-label">Pending Leaves</p>
+                    <p class="counting-value">2 Requests</p>
+                    <a href="attendance.html" class="summary-link">Review Leaves</a>
+                </div>
+                <div class="counting-card">
+                    <p class="counting-label">Notice Alart</p>
+                    <p class="counting-value">3 new notifications</p>
+                    <a href="notices.html" class="summary-link">View Notices</a>
+                </div>
+            </div>
+
+
+
+                <fieldset id="notice">
+                <legend>Notifications & Pending Actions</legend>
+                <table>
+                    <tr>
+                        <td>Admin Task Alerts :</td>
+                        <td>3 new tasks received from Admin awaiting breakdown and assignment.</td>
+                    </tr>
+                    <tr>
+                        <td>Pending Approvals :</td>
+                        <td>2 leave requests pending your review.</td>
+                    </tr>
+                    <tr>
+                        <td>Upcoming Deadlines :</td>
+                        <td>Sprint Release 2 deliverables due this Thursday.</td>
+                    </tr>
+                </table>
+                </fieldset>
+
+
+
+                <fieldset id="team-calendar">
+                <legend>Team Calendar (Leaves & Deadlines)</legend>
+                <table border="1" id="team-notice">
+                        <tr>
+                            <th>Date</th>
+                            <th>Event / Activity</th>
+                            <th>Category</th>
+                            <th>Involved Personnel</th>
+                        </tr>
+
+                        <tr>
+                            <td>Nov 03 - Nov 05, 2026</td>
+                            <td>Approved Medical Leave</td>
+                            <td>Leave</td>
+                            <td>Sadia Islam</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nov 05, 2026</td>
+                            <td>Sprint 2 Authentication Code Freeze</td>
+                            <td>Deadline</td>
+                            <td>Engineering Team</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nov 08, 2026</td>
+                            <td>Monthly Architecture Review Meeting</td>
+                            <td>Department Sync</td>
+                            <td>Team Lead & Admin</td>
+                        </tr>
+                </table>
+                </fieldset>
+
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>

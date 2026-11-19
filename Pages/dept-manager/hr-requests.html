@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>HR Requests - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html" >Dashboard</a>
+                <a href="attendance.html">Attendance & Leaves</a>
+                <a href="tasks.html">Task Board</a>
+                <a href="performance.html">Performance</a>
+                <a href="hr-requests.html" class="active">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <br>
+
+
+            <div class="dashboard-section">
+                
+                <form onsubmit="return validateHRRequestForm()">
+                    <fieldset id="hr-requests">
+                        <legend>HR Requests (New Hires & Transfers)</legend>
+                    <table>
+                        <tr>
+                            <td><label for="requestType">Request Type :</label></td>
+                            <td>
+                                <select id="requestType" name="requestType">
+                                    <option value="">Select request category</option>
+                                    <option value="hire">Request New Hire</option>
+                                    <option value="transfer">Request Internal Transfer</option>
+                                </select>
+                                <p class="error" id="ReqTypeError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="reqRole">Designation / Role :</label></td>
+                            <td>
+                                <input type="text" id="reqRole" name="reqRole" placeholder="e.g., Backend Python Engineer">
+                                <p class="error" id="ReqRoleError"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="reqReason">Role Description :</label></td>
+                            <td>
+                                <textarea id="reqReason" name="reqReason" rows="4" placeholder="Explain team workload or skill gap"></textarea>
+                                <p class="error" id="ReqReasonError"></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Submit Request to HR">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>
