@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/registration.css">
+        <script src="../../JS/dept-manager/registration.js"></script>
+        <title>Department Manager Registration</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="../../Images/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="../../index.html">Home</a>
+                <a href="../../Pages/dept-manager/login.html" class="active">Portal</a>
+
+            </div>
+
+            <div class="reg-form">
+                <form onsubmit="return collect_data()">
+                    <h2>Department Manager Registration</h2>
+
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <table>
+                            <tr>
+                                <td><label for="FullName">Full Name :</label></td>
+                                <td>
+                                    <input type="text" name="FullName" id="FullName" placeholder="Enter Your Name">
+                                    <p class="error" id="FullNameError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Email">Email :</label></td>
+                                <td>
+                                    <input type="email" name="Email" id="Email" placeholder="Enter Your Email">
+                                    <p class="error" id="EmailError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="PhnNum">Phone Number :</label></td>
+                                <td>
+                                    <input type="text" name="PhnNum" id="PhnNum" placeholder="Enter Your Phone Number">
+                                    <p class="error" id="PhoneError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label>Gender :</label></td>
+                                <td>
+                                    <label for="male"><input type="radio" name="gender" id="male" value="Male"> Male</label>
+                                    <label for="female"><input type="radio" name="gender" id="female" value="Female"> Female</label>
+                                    <p class="error" id="GenderError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="dob">Date of Birth :</label></td>
+                                <td>
+                                    <input type="date" name="DOB" id="dob">
+                                    <p class="error" id="DOBError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Citizen">Citizen :</label></td>
+                                <td>
+                                    <select name="Citizen" id="Citizen">
+                                        <option value="">Select Country</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="JP">Japan</option>
+                                    </select>
+                                    <p class="error" id="CitizenError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Picture">Upload Photo :</label></td>
+                                <td>
+                                    <input type="file" name="Picture" id="Picture">
+                                    <p class="hint">JPG or PNG, up to 2 MB</p>
+                                    <p class="error" id="PictureError"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Professional Information</legend>
+                        <table>
+                            <tr>
+                                <td><label for="EmpReg">Dept Manager ID  :</label></td>
+                                <td>
+                                    <input type="text" name="EmpReg" id="EmpReg" placeholder="DM-1234">
+                                    <p class="error" id="EmpRegError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="dept">Select Department :</label></td>
+                                <td>
+                                    <select name="dept" id="dept">
+                                        <option value="">Select Department</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="DevOps">DevOps</option>
+                                        <option value="Software Quality Assurance">Software Quality Assurance (SQA)</option>
+                                        <option value="Cybersecurity & SecOps">Cybersecurity</option>
+                                    </select>
+                                    <p class="error" id="DeptError"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Account</legend>
+                        <table>
+                            <tr>
+                                <td><label for="username">Username :</label></td>
+                                <td>
+                                    <input type="text" name="username" id="username" placeholder="Enter Username">
+                                    <p class="error" id="UsernameError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="password">Password :</label></td>
+                                <td>
+                                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                                    <p class="error" id="PasswordError"></p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Conpassword">Confirm Password :</label></td>
+                                <td>
+                                    <input type="password" name="Conpassword" id="Conpassword" placeholder="Re-enter Password">
+                                    <p class="error" id="ConfirmPasswordError"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+
+
+                    <label for="regTerms"><input type="checkbox" id="regTerms"> I agree to all Terms and Services</label>
+                    <p id="regTermsError" class="error"></p>
+                    <br>
+                    <input type="submit" id="submit" value="Register">
+                    <input type="reset" id="reset" value="Reset">
+
+                    <p class="bottom-link">Already have an account? <a href="../../Pages/dept-manager/login.html">Login</a></p>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+</html>

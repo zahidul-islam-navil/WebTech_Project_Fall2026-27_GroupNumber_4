@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f6;
+    color: #222;
+}
+
+
+.header {
+    background-color: #244957;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #dce8ec;
+    padding: 0 15px;
+}
+
+.topnav a {
+    float: left;
+    padding: 15px 17px;
+    color: #233d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topnav a:hover,
+.topnav a.active {
+    background-color: #347580;
+    color: white;
+}
+
+
+.login {
+    background-color: white;
+    border: 1px solid #d4dce0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #d5dadd;
+    margin: 35px auto;
+    padding: 28px;
+    width: 92%;
+    max-width: 430px;
+}
+
+fieldset {
+    background-color: #f9fbfc;
+    border: 1px solid #d4dce0;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+h2 {
+    color: #213a47;
+    margin-top: 0;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+
+input[type="submit"],
+input[type="reset"] {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 6px 4px 0 4px;
+}
+
+#login {
+    background-color: #347580;
+}
+
+#reset {
+    background-color: #6a7880;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    opacity: 0.85;
+}
+
+.bottom-link {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.bottom-link a {
+    color: #347580;
+}
+
+.footer {
+    text-align: center;
+    color: #53646a;
+    padding: 20px;
+}

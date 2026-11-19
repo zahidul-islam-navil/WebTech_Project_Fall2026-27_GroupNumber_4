@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Department Manager Login</title>
+        <link rel="stylesheet" href="../../Design/dept-manager/login.css">
+        <script src="../../JS/dept-manager/login.js" ></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="../../index.html">Home</a>
+                <a href="../../Pages/dept-manager/login.html" class="active">Portal</a>
+
+            </div>
+
+            <div class="login">
+                <h2>Department Manager Login</h2>
+
+                <form action="" onsubmit="return collect_data()">
+                    <fieldset>
+                    <div class="field">
+                        <label for="username">Usernamme</label>
+                        <input type="text" id="username" placeholder="Enter Username">
+                        <p id="usernameError" class="error"></p>
+                    </div>
+
+                <div class="field">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password">
+                    <p id="loginPasswordError" class="error"></p>
+                </div>
+
+
+
+                    <input type="submit" value="Login" id="login">
+                    <input type="reset" value="Reset" id="reset">
+                </fieldset>
+                    <p class="bottom-link">Don't have an account? 
+                    <a href="../dept-manager/registration.html">Register</a></p>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Created By MD Afsan Abid</h5>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../Design/dept-manager/dashboard.css">
+        <script src="../../JS/dept-manager/dashboard.js"></script>
+        <title>Task Board - Department Manager</title>
+    </head>
+
+    <body class="team-lead">
+        <div class="container">
+            
+            <div class="header">
+                <img src="../../Images/dept-manager/ems-logo.jpg" alt="logo" id="logo">
+                <h1>EMSync (Employee Management System)</h1>
+            </div>
+
+            <div class="topnav">
+                <a href="dashboard.html" >Dashboard</a>
+                <a href="attendance.html">Attendance & Leaves</a>
+                <a href="tasks.html" class="active">Task Board</a>
+                <a href="performance.html">Performance</a>
+                <a href="hr-requests.html">HR Requests</a>
+                <a href="notices.html">Notices</a>
+                <a href="profile.html">My Profile</a>
+                <a href="../../Pages/dept-manager/login.html" style="float: right;">Log Out</a>
+            </div>
+
+            <br>
+
+
+            <div class="dashboard-section">
+                <fieldset id="admin-tasks">
+                <legend>Admin Given Tasks</legend>
+
+                <table border="1" id="tasks">
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Task Title</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>TASK-101</td>
+                        <td>Authentication Module Refactor</td>
+                        <td>High</td>
+                        <td>Nov 10, 2026</td>
+                        <td>Accepted</td>
+                    </tr>
+                    <tr>
+                        <td>TASK-102</td>
+                        <td>API Gateway Routing Configuration</td>
+                        <td>Medium</td>
+                        <td>Nov 14, 2026</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>TASK-103</td>
+                        <td>Automated Regression Test Suite Setup</td>
+                        <td>Normal</td>
+                        <td>Nov 18, 2026</td>
+                        <td>Pending</td>
+                    </tr>
+                </table>
+                </fieldset>
+            </div>
+
+            <div class="dashboard-section">
+                <form onsubmit="return validateTaskAssignment()">
+                <fieldset id="sub-tasks">
+                <legend>Task Board</legend>
+
+                <table>
+                    <tr>
+                        <td><label for="adminTask">Tasks :</label></td>
+                        <td>
+                            <select id="adminTask" name="adminTask">
+                                <option value="">Select incoming Admin task to accept</option>
+                                <option value="TASK-101">TASK-101: Authentication Module Refactor (High Priority)</option>
+                                <option value="TASK-102">TASK-102: API Gateway Routing Configuration</option>
+                                <option value="TASK-103">TASK-103: Automated Regression Test Suite Setup</option>
+                            </select>
+                            <p class="error" id="AdminTaskError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="assignMember">Assign To Member :</label></td>
+                        <td>
+                            <select id="assignMember" name="assignMember">
+                                <option value="">Select Team Member</option>
+                                <option value="EMP-1021">Tariq Rahman (Senior SE)</option>
+                                <option value="EMP-1025">Sadia Islam (SQA)</option>
+                                <option value="EMP-1033">Tanvir Hasan (DevOps)</option>
+                                <option value="EMP-1042">Nusrat Jahan (Frontend)</option>
+                            </select>
+                            <p class="error" id="AssignMemberError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="taskDeadline">Task Deadline :</label></td>
+                        <td>
+                            <input type="date" id="taskDeadline" name="taskDeadline">
+                            <p class="error" id="DeadlineError"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="taskBreakdown">Task Description :</label></td>
+                        <td>
+                            <textarea id="taskBreakdown" name="taskBreakdown" rows="3" placeholder="Describe specific deliverables for the member"></textarea>
+                            <p class="error" id="BreakdownError"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <input type="button" value="Assign Sub-Task" class="assign-btn" onclick="validateTaskAssignment()">
+                </fieldset>
+                </form>
+            </div>
+
+
+            <div class="dashboard-section">
+                <fieldset id="progress-report">
+                <legend>Admin Progress Reporting</legend>
+
+                <table border="1" id="report">
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Title / Sub-Task</th>
+                        <th>Assignee</th>
+                        <th>Status</th>
+                        <th>Report to Admin</th>
+                    </tr>
+                    <tr>
+                        <td>TASK-101A</td>
+                        <td>OAuth2 Token Validation Logic</td>
+                        <td>Tariq Rahman</td>
+                        <td>In Progress</td>
+                        <td><input type="button" value="Submit Progress" class="report-btn" onclick="reportProgress('TASK-101A')"></td>
+                    </tr>
+                    <tr>
+                        <td>TASK-101B</td>
+                        <td>Login Frontend Responsive View</td>
+                        <td>Nusrat Jahan</td>
+                        <td>Pending</td>
+                        <td><input type="button" value="Submit Progress" class="report-btn" onclick="reportProgress('TASK-101B')"></td>
+                    </tr>
+                    <tr>
+                        <td>TASK-098</td>
+                        <td>CI/CD Pipeline Build Fix</td>
+                        <td>Tanvir Hasan</td>
+                        <td>Completed</td>
+                        <td><input type="button" value="Send Final Report" class="report-btn" onclick="reportProgress('TASK-098')"></td>
+                    </tr>
+                </table>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h6>Created By MD Afsan Abid</h6>
+        </div>
+    </body>
+</html>
