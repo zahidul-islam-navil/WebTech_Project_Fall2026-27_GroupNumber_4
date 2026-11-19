@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html" class="active">Leave</a>
+            <a href="emp_tasks.html">Tasks</a>
+            <a href="emp_payslips.html">Payslips</a>
+            <a href="emp_notices.html">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div>
+            <h2>Apply for Leave</h2>
+            <form id="leaveForm" onsubmit="return validateLeave()" onreset="clearLeaveErrors()" novalidate>
+
+                <div class="field">
+                    <label for="leaveType">Leave Type</label>
+                    <select id="leaveType">
+                        <option value="">Choose leave type</option>
+                        <option value="Casual Leave">Casual Leave</option>
+                        <option value="Sick Leave">Sick Leave</option>
+                        <option value="Annual Leave">Annual Leave</option>
+                    </select>
+                    <p id="leaveTypeError" class="error-message"></p>
+                </div>
+            
+                <div class="field">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate">
+                    <p id="startDateError" class="error-message"></p>
+                </div>
+            
+                <div class="field">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate">
+                    <p id="endDateError" class="error-message"></p>
+                </div>
+
+                <div class="field">
+                    <label for="leaveReason">Reason</label>
+                    <textarea id="leaveReason" rows="3" placeholder="Enter your reason"></textarea>
+                    <p id="leaveReasonError" class="error-message"></p>
+                </div>
+            
+                <p id="leaveMessage"></p>
+            
+                <div class="leave-buttons">
+                    <button type="submit">Submit Request</button>
+                    <button type="reset" class="clear-button">Clear</button>
+                </div>
+            
+            </form>
+
+        </div>
+
+        <div>
+            <h2>My Leave Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Leave Type</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="leaveHistory">
+                    <tr>
+                        <td>Casual Leave</td>
+                        <td>10 Nov 2026</td>
+                        <td>10 Nov 2026</td>
+                        <td>Approved</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>

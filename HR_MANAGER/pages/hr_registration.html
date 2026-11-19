@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resource Registration</title>
+<link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+   
+    <script src="../JS/hr_js/hr_script.js" defer></script>
+</head>
+<body>
+
+    <header class="pagehead">
+        <div class="logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+    </header>
+
+    <nav class="page_nav">
+        <div class="nav_item">
+            <a href="index.html">Home</a>
+            <a href="hr_login.html">Login</a>
+            <a href="hr_registration.html" class="active">Registration</a>
+        </div>
+    </nav>
+
+    <main class="registration_main">
+        <h2>HR Manager Registration</h2>
+
+        
+        <form id="registrationForm" onsubmit="return validateregistration()" onreset="clearregerror()" novalidate>
+            <div class="field">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" placeholder="Enter full name">
+                <p id="regnameerr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regId">Employee ID</label>
+                <input type="text" id="regId" placeholder="EMP-1042">
+                <p id="regiderr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regEmail">E-mail</label>
+                <input type="email" id="regEmail" placeholder="Enter e-mail">
+                <p id="regmailerr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPhone">Phone Number</label>
+                <input type="tel" id="regPhone" placeholder="01XXXXXXXXX">
+                <p id="regfonerr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regEmergency">Emergency Contact</label>
+                <input type="tel" id="regEmergency" placeholder="01XXXXXXXXX">
+                <p id="regemererr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regDepartment">Department</label>
+                <select id="regDepartment">
+                    <option value="">Select department</option>
+                    <option>Software Engineering</option>
+                    <option>Human Resources</option>
+                    <option>Finance</option>
+                    <option>Marketing</option>
+                    <option>Administration</option>
+                </select>
+                <p id="regdepterr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPosition">Position</label>
+                <select id="regPosition">
+                    <option value="">Select position</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Software Engineer</option>
+                    <option>HR Officer</option>
+                    <option>Accountant</option>
+                    <option>Marketing Executive</option>
+                    <option>Office Assistant</option>
+                </select>
+                <p id="regposerr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regGender">Gender</label>
+                <select id="regGender">
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+                <p id="reggenderr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regDob">Date of Birth</label>
+                <input type="date" id="regDob">
+                <p id="regdberr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regBlood">Blood Group</label>
+                <select id="regBlood">
+                    <option value="">Select blood group</option>
+                    <option>A+</option><option>A-</option>
+                    <option>B+</option><option>B-</option>
+                    <option>AB+</option><option>AB-</option>
+                    <option>O+</option><option>O-</option>
+                </select>
+                <p id="regblderr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regAddress">Address</label>
+                <textarea id="regAddress" rows="3" placeholder="Enter address"></textarea>
+                <p id="regadderr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regpassword" placeholder="At least 8 characters">
+                <p id="regpasserr" class="err_msg"></p>
+            </div>
+
+            <div class="field">
+                <label for="regConfirm">Confirm Password</label>
+                <input type="password" id="regConfirm" placeholder="Confirm password">
+                <p id="confirmerr" class="err_msg"></p>
+            </div>
+
+            <div class="checkbox_field">
+                <input type="checkbox" id="regTerms">
+                <label for="regTerms">I agree to all Terms and Services</label>
+            </div>
+            <p id="regtermerr" class="err_msg"></p>
+
+            <div class="form_btn">
+                <button type="submit">Register</button>
+                <button type="reset" class="reset-button">Reset</button>
+            </div>
+        </form>
+
+        <p class="bottom-link">Already have an account? <a href="hr_login.html">Login</a></p>
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management - EMSync</title>
+
+<link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+    <script src="../script/hr_script.js" defer></script>
+</head>
+
+<body class="employee_page">
+    <nav class="dashboard_nav">
+
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+        <div class="dashboard_links">
+            <a href="hr_dashboard.html">Dashboard</a>
+            <a href="hr_employee.html">Employees</a>
+            <a href="hr_notice.html">Notices</a>
+            <a href="hr_leave.html">Leave</a>
+            <a href="hr_attendance.html">Attendance</a>
+            <a href="hr_payroll.html" class="active">Payroll</a>
+            <a href="hr_recruitment.html">Recruitment</a>
+            <a href="hr_performance.html">Performance</a>
+        </div>
+
+        <div class="dashboard_logout">
+            <a href="hr_login.html">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <main class="employee_main">
+
+        <fieldset class="employee_fieldset">
+
+            <h2>Payroll Management</h2>
+
+            <form onsubmit="return calculateSalary()" onreset="clearSalary()">
+
+                <div class="field">
+                    <label for="payName">Employee Name</label>
+                    <input type="text" id="payName"placeholder="Enter employee name" required>
+                </div>
+
+                <div class="field">
+                    <label for="payId">Employee ID</label>
+                    <input type="text" id="payId"placeholder="Enter ID" required>
+                </div>
+
+                <div class="field">
+                    <label for="basic">Basic Salary</label>
+                    <input type="number" id="basic"
+                           placeholder="Enter basic salary"min="0" step="0.01" required>
+                </div>
+
+                <div class="field">
+                    <label for="allowance">Allowance</label>
+                    <input type="number" id="allowance"placeholder="Enter allowance"min="0" step="0.01" required>
+                </div>
+
+                <div class="field">
+                    <label for="deduction">Deduction</label>
+                    <input type="number" id="deduction"placeholder="Enter deduction"min="0" step="0.01" required>
+                </div>
+
+                <div class="field">
+                    <label for="tax">Tax</label>
+                    <input type="number" id="tax"placeholder="Enter tax"min="0" step="0.01" required>
+                </div>
+
+                <div class="field">
+                    <label>Net Salary</label>
+                    <h2 id="netSalary">0.00 Tk</h2>
+                </div>
+
+                <p id="salaryError" class="err_msg"></p>
+
+                <div class="form_btn">
+                    <button type="submit">Calculate Salary</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+
+            </form>
+
+        </fieldset>
+
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>

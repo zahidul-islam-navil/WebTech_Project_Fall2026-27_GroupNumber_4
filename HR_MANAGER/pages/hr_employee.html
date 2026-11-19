@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - EMSync</title>
+   <link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+    <script src="../JS/hr_js/hr_script.js" defer></script>
+</head>
+
+<body class="employee_page">
+
+    <nav class="dashboard_nav">
+
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+        <div class="dashboard_links">
+            <a href="hr_dashboard.html">Dashboard</a>
+            <a href="hr_employee.html" class="active">Employees</a>
+            <a href="hr_notice.html">Notices</a>
+            <a href="hr_leave.html">Leave</a>
+            <a href="hr_attendance.html">Attendance</a>
+            <a href="hr_payroll.html">Payroll</a>
+            <a href="hr_recruitment.html">Recruitment</a>
+            <a href="hr_performance.html">Performance</a>
+        </div>
+
+        <div class="dashboard_logout">
+            <a href="hr_login.html">Logout</a>
+        </div>
+
+    </nav>
+    <main class="employee_main">
+
+        <fieldset class="employee_fieldset">
+
+            <div class="employee_header">
+                <h2>Employee Management</h2>
+                <button type="button" onclick="showEmployeeForm()">
+                    Add Employee
+                </button>
+            </div>
+
+            <div class="employee_table">
+
+                <table id="employeeTable">
+
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Full Name</th>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                     <tr>
+                     <td>EMP-1001</td>
+                     <td>Kamal Naser</td>
+                     <td>IT</td>
+                     <td>Web Developer</td>
+                            <td>
+                                <button type="button" onclick="editEmployee(this)">Edit</button>
+
+                 <button type="button"class="delete_btn"onclick="deleteEmployee(this)">Delete</button>
+                            </td>
+                        </tr>
+
+                <tr>
+                  <td>EMP-1002</td>
+                  <td>Jamshed Mojumder</td>
+                <td>HR</td>
+                <td>HR Officer</td>
+              <td>
+             <button type="butto onclick="editEmployee(this)">Edit</button>
+
+              <button type="button" class="delete_btn"onclick="deleteEmployee(this)">Delete </button>
+                            </td>
+                        </tr>
+
+                <tr>
+                 <td>EMP-1003</td>
+                <td>Tanvir Hasan</td>
+                <td>Finance</td>
+                 <td>Accountant</td>
+                 <td>
+                <button type="button"onclick="editEmployee(this)">Edit
+                                </button>
+
+                                <button type="button"
+                                    class="delete_btn"onclick="deleteEmployee(this)">Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="employee_form" id="employeeForm"
+                 style="display: none;">
+
+                <h2 id="employeeFormTitle">Add Employee</h2>
+
+                <form id="empForm" onsubmit="return saveEmployee(event)"novalidate>
+
+                    <div class="field">
+                        <label for="empid">Employee ID</label>
+                        <input type="text" id="empid"
+                               placeholder="EMP-1004">
+                    </div>
+
+                    <div class="field">
+                        <label for="empname">Full Name</label>
+                        <input type="text" id="empname"
+                               placeholder="Enter full name">
+                    </div>
+
+                    <div class="field">
+                        <label for="empdepartment">Department</label>
+
+                     <select id="empdepartment">
+                     <option value="">Select Department</option>
+                    <option value="HR">HR</option>
+                    <option value="IT">IT</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                        </select>
+         </div>
+
+       <div class="field">
+      <label for="empposition">Position</label>
+     <input type="text" id="empposition" placeholder="Enter position">
+                    </div>
+
+                    <div class="form_btn">
+                        <button type="submit" id="saveEmployeeBtn"> Save Employee
+                        </button>
+
+                        <button type="button" class="reset-button"onclick="hideEmployeeForm()">Cancel </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </fieldset>
+
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>

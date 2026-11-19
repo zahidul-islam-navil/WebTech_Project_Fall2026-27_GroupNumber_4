@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management - EMSync</title>
+
+  <link rel="stylesheet" href="../../design/hr_css/hr_portal.css">
+<link rel="stylesheet" href="../../design/hr_css/hr_style.css">
+</head>
+
+<body class="employee_page">
+
+    <nav class="dashboard_nav">
+
+        <div class="dashboard_logo">
+            <img src="../images/ems-logo.jpg" alt="EMSync Logo">
+        </div>
+
+  
+<div class="dashboard_links">
+    <a href="hr_dashboard.html">Dashboard</a>
+    <a href="hr_employee.html">Employees</a>
+    <a href="hr_notice.html">Notices</a>
+    <a href="hr_leave.html">Leaves</a>
+    <a href="hr_attendance.html" class="active">Attendance</a>
+    <a href="hr_payroll.html">Payroll</a>
+    <a href="hr_recruitment.html">Recruitment</a>
+    <a href="hr_performance.html">Performance</a>
+</div>
+
+<div class="dashboard_logout">
+    <a href="hr_login.html">Logout</a>
+</div>
+
+
+    </nav>
+
+    <main class="employee_main">
+
+        <fieldset class="employee_fieldset">
+
+            <h2>Attendance Management</h2>
+
+            <form>
+
+                <div class="employee_table">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Attendance Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Rahim Ahmed</td>
+                                <td>
+                                    <select name="attendance1">
+                                        <option value="present">Present</option>
+                                        <option value="absent">Absent</option>
+                                        <option value="late">Late</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Nusrat Jahan</td>
+                                <td>
+                                    <select name="attendance2">
+                                        <option value="present">Present</option>
+                                        <option value="absent">Absent</option>
+                                        <option value="late">Late</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Tanvir Hasan</td>
+                                <td>
+                                    <select name="attendance3">
+                                        <option value="present">Present</option>
+                                        <option value="absent">Absent</option>
+                                        <option value="late">Late</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="form_btn">
+                    <button type="button">Update Attendance</button>
+                </div>
+
+            </form>
+
+        </fieldset>
+
+    </main>
+
+    <footer>
+        EMSync &copy; 2026
+    </footer>
+
+</body>
+</html>

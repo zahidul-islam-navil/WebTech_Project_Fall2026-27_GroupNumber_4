@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Notice Management</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html">Employee Directory</a>
+            <a href="admin-tasks.html">Task Assignments</a>
+            <a href="admin-notices.html" class="active">Notice Management</a>
+            <a href="admin-reports.html">Reports</a>
+            <a href="admin-settings.html">Company Settings</a>
+            <a href="admin-profile.html">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+
+    <div class="admin-main">
+
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="page-header">
+                    <h1>Notice Management &amp; Moderation</h1>
+            </div>
+
+            <form id="systemNoticeForm">
+                <fieldset>
+                    <legend>Publish System Announcement</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="NoticeTitle">Notice Title:</label></td>
+                            <td>
+                                <input type="text" id="NoticeTitle" placeholder="e.g. Scheduled ERP Infrastructure Maintenance Window">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="NoticeBody">Notice Body:</label></td>
+                            <td>
+                                <textarea id="NoticeBody" placeholder="Full notice details, downtime duration, affected services..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="NoticeAudience">Target Audience:</label></td>
+                            <td>
+                                <select id="NoticeAudience">
+                                    <option value="All Personnel">All Personnel (Organization-wide)</option>
+                                    <option value="Management Only">Management &amp; HR Only</option>
+                                    <option value="IT Department">Engineering &amp; IT Unit</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="NoticePriority">Priority:</label></td>
+                            <td>
+                                <select id="NoticePriority">
+                                    <option value="High (Urgent)">High (Urgent Announcement)</option>
+                                    <option value="Standard" selected>Standard Information</option>
+                                    <option value="Low">Low Priority</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="NoticeExpiry">Expiration Date:</label></td>
+                            <td>
+                                <input type="date" id="NoticeExpiry">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="form-buttons">
+                        <input type="submit" id="submit" value="Publish System Notice">
+                        <input type="reset" id="reset" value="Reset Fields">
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <h3>HR Notice Moderation &amp; System Queue</h3>
+                </div>
+
+                <table class="data-table" id="noticesTable">
+                    <tr>
+                        <td><strong>Notice Title</strong></td>
+                        <td><strong>Author / Origin</strong></td>
+                        <td><strong>Audience</strong></td>
+                        <td><strong>Priority</strong></td>
+                        <td><strong>Expiry</strong></td>
+                        <td><strong>Status</strong></td>
+                        <td><strong>Moderation Action</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emergency Security Patch Deployment</strong></td>
+                        <td>Navil (System Admin)</td>
+                        <td>All Personnel</td>
+                        <td>High</td>
+                        <td>2026-11-25</td>
+                        <td>Published</td>
+                        <td><em>System Admin</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Annual Winter Holiday Schedule</strong></td>
+                        <td>Rafiqul Islam (HR)</td>
+                        <td>All Personnel</td>
+                        <td>Standard</td>
+                        <td>2026-12-31</td>
+                        <td>Pending Approval</td>
+                        <td>
+                            <button type="button">Approve</button>
+                            <button type="button">Hide</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Updated Parking Lot Regulations</strong></td>
+                        <td>Farzana Yeasmin (Admin Support)</td>
+                        <td>All Personnel</td>
+                        <td>Low</td>
+                        <td>2026-11-15</td>
+                        <td>Expired</td>
+                        <td><button type="button">Archive</button></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

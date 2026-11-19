@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f2f5f6;
+    color: #222;
+}
+
+h1, h2, h3 {
+    color: #213a47;
+}
+
+/* Header */
+.page-header {
+    background-color: #087F8C;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h3 {
+    color: white;
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Navigation */
+.page-nav {
+    background-color: #dce8ec;
+}
+
+.nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.page-nav a {
+    padding: 15px 25px;
+    color: #233d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-nav a:hover, .page-nav a.active {
+    background-color: #2a899a;
+    color: white;
+    border-top: 5px;
+    border-bottom: 5px solid #911c1c;
+}
+
+/* Main */
+main {
+    width: 95%;
+    max-width: 1500px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #d4dce0;
+    border-radius: 12px;
+}
+
+main > div + div {
+    border-top: 3px solid #000000;
+    margin: 28px 0px;
+    padding: 25px 0px;
+}
+
+/* Dashboard */
+.overview .info-rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.overview .info-rows > div {
+    display: block;
+    background-color: #edf3f4;
+    border: 1px solid #96adb5;
+    border-radius: 12px;
+    padding: 17px;
+}
+
+.overview-box h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.overview-box h2 {
+    font-size: 30px;
+}
+
+/* Employee Picture */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #347580;
+}
+
+.employee-information .employee-image {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+/* Employee Information */
+.info-rows > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 9px 0;
+}
+
+.info-rows p {
+    margin: 5px 0;
+}
+
+.employee-information .info-rows > div,
+.contact-information .info-rows > div {
+    justify-content: flex-start;
+}
+
+.employee-information .info-rows p:first-child,
+.contact-information .info-rows p:first-child {
+    width: 155px;
+}
+
+/* Forms */
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.field input,
+.field select,
+.field textarea {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font: inherit;
+}
+
+/* Validation Messages */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.error-message:empty {
+    display: none;
+}
+
+/* Buttons */
+button {
+    background-color: #347580;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.logout-button {
+    background-color: #be3434;
+}
+
+.checkin-button {
+    background-color: #287b55;
+}
+
+.checkout-button,
+.clear-button {
+    background-color: #6a7880;
+}
+
+.attendance-buttons,
+.leave-buttons {
+    margin-top: 15px;
+}
+
+.attendance-buttons button,
+.leave-buttons button {
+    margin-right: 8px;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #cad4d9;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #dce8ec;
+}
+
+td select {
+    padding: 8px;
+}
+
+/* Notices and Feedback */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice + .notice,
+.manager-feedback {
+    border-top: 3px solid #607d8b;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.subtext {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #53646a;
+}

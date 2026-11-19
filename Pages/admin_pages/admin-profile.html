@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - My Profile &amp; Security</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <!-- Persistent Sidebar -->
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html">Employee Directory</a>
+            <a href="admin-tasks.html">Task Assignments</a>
+            <a href="admin-notices.html">Notice Management</a>
+            <a href="admin-reports.html">Reports</a>
+            <a href="admin-settings.html">Company Settings</a>
+            <a href="admin-profile.html" class="active">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+
+    <div class="admin-main">
+
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="page-header">
+                <div>
+                    <h1>Profile &amp; Security</h1>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Administrator Profile</legend>
+                <div>
+                <table class="form-table">
+                    <tr>
+                        <td><label>Full Name:</label></td>
+                        <td><strong>Md. Zahidul Islam Navil</strong></td>
+                    </tr>
+                    <tr>
+                        <td><label>Username:</label></td>
+                        <td>pengvil</td>
+                    </tr>
+                    <tr>
+                        <td><label>Admin ID:</label></td>
+                        <td>ADM-01</td>
+                    </tr>
+                    <tr>
+                        <td><label>Assigned Role:</label></td>
+                        <td><strong> Administrator </strong></td>
+                    </tr>
+                    <tr>
+                        <td><label>Work Email:</label></td>
+                        <td>navil@emsync.corp</td>
+                    </tr>
+                </table>
+            </div>
+            </fieldset>
+
+            <form id="changePasswordForm">
+                <fieldset>
+                    <legend>Change Password</legend>
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="CurrentPassword">Current Password: </label></td>
+                            <td>
+                                <input type="password" id="CurrentPassword" placeholder="Enter current password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="NewPassword">New Password: </label></td>
+                            <td>
+                                <input type="password" id="NewPassword" placeholder="Enter new password">
+                                <p class="hint">Must be at least 8 characters, contain at least 1 uppercase letter, 1 number, and 1 special character (_, @, &, $)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ConfirmNewPassword">Confirm New Password: </label></td>
+                            <td>
+                                <input type="password" id="ConfirmNewPassword" placeholder="Re-enter new password">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="form-buttons">
+                        <input type="submit" id="submit" value="Update Password">
+                        <input type="reset" id="reset" value="Reset Fields">
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

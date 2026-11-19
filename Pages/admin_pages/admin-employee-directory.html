@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSync - Employee Directory</title>
+    <link rel="stylesheet" href="../../Design/admin_design/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../../Images/ems-logo.jpg" class="sidebar-logo">
+            <div class="sidebar-title">
+                <h2>EMSync</h2>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-users.html">User Accounts</a>
+            <a href="admin-employee-directory.html" class="active">Employee Directory</a>
+            <a href="admin-tasks.html">Task Assignments</a>
+            <a href="admin-notices.html">Notice Management</a>
+            <a href="admin-reports.html">Reports</a>
+            <a href="admin-settings.html">Company Settings</a>
+            <a href="admin-profile.html">My Profile &amp; Security</a>
+        </div>
+
+        <div class="sidebar-footer">
+            EMSync &copy; 2026
+        </div>
+    </div>
+
+    <div class="admin-main">
+        <div class="admin-topbar">
+            <div class="topbar-user">
+                <img src="../../Images/admin_images/navil - Copy.jpg">
+                <strong>Navil (Admin)</strong>
+            </div>
+            <div class="topbar-actions">
+                <a href="admin-login.html" class="logout-btn">Sign Out</a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="page-header">
+                    <h1>Employee Directory</h1>
+            </div>
+
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <label for="deptSelectFilter">Department:</label>
+                    <select id="deptSelectFilter" onchange="filterByDepartment()">
+                        <option value="all">All Departments</option>
+                        <option value="Engineering & IT">Engineering &amp; IT</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Finance & Accounts">Finance &amp; Accounts</option>
+                        <option value="Marketing & Sales">Marketing &amp; Sales</option>
+                    </select>
+                </div>
+
+                <table class="data-table" id="empTable">
+                    <th>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Full Name</th>
+                            <th>Department</th>
+                            <th>Position / Title</th>
+                            <th>Work Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </th>
+                        <tr>
+                            <td><strong>EMP-1002</strong></td>
+                            <td>Zarek</td>
+                            <td>Engineering &amp; IT</td>
+                            <td>Senior DevOps Engineer</td>
+                            <td>zarek_devops@emsync.corp</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EMP-2001</strong></td>
+                            <td>QZ</td>
+                            <td>Human Resources</td>
+                            <td>HR Manager</td>
+                            <td>qz_hr@emsync.corp</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EMP-3001</strong></td>
+                            <td>sakib</td>
+                            <td>Finance &amp; Accounts</td>
+                            <td>Senior Financial Analyst</td>
+                            <td>sakib_fin@emsync.corp</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EMP-4001</strong></td>
+                            <td>Anik</td>
+                            <td>Marketing &amp; Sales</td>
+                            <td>Marketing Specialist</td>
+                            <td>anik_mkt@emsync.corp</td>
+                            <td>On Leave</td>
+                        </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payslips</title>
+    <link rel="stylesheet" href="../../Design/employee/emp_main.css">
+    <script src="../../JS/employee/emp_main.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="logo">
+            <img src="../../Images/ems-logo.jpg" height="50" width="50">
+            <h3>EMSync</h3>
+        </div>
+        <button type="button" id="logoutButton" class="logout-button">Logout</button>
+    </header>
+
+    <nav class="page-nav">
+        <div class="nav-item">
+            <a href="emp_dashboard.html">Dashboard</a>
+            <a href="emp_attendance.html">Attendance</a>
+            <a href="emp_leave.html">Leave</a>
+            <a href="emp_tasks.html">Tasks</a>
+            <a href="emp_payslips.html" class="active">Payslips</a>
+            <a href="emp_notices.html">Notices</a>
+            <a href="emp_performance.html">Performance</a>
+            <a href="emp_profile.html">My Profile</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Payslip History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Basic Salary</th>
+                    <th>Allowance</th>
+                    <th>Deduction</th>
+                    <th>Net Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>October 2026</td>
+                    <td>৳36,000</td>
+                    <td>৳6,000</td>
+                    <td>৳2,000</td>
+                    <td>৳40,000</td>
+                    <td>
+                        <button type="button">Download</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>September 2026</td>
+                    <td>৳36,000</td>
+                    <td>৳6,000</td>
+                    <td>৳2,000</td>
+                    <td>৳40,000</td>
+                    <td>
+                        <button type="button">Download</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>August 2026</td>
+                    <td>৳36,000</td>
+                    <td>৳6,000</td>
+                    <td>৳2,000</td>
+                    <td>৳40,000</td>
+                    <td>
+                        <button type="button">Download</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>EMSync &copy; 2026</footer>
+
+</body>
+</html>
